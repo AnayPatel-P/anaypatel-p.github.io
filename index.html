@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anay Patel — Data Science & ML</title>
+<meta name="description" content="Anay Patel — data scientist and ML engineer. Data Science Associate at Wio Bank, MS Business Analytics & AI at UT Austin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf8;
+    --surface: #ffffff;
+    --text: #1a1d21;
+    --muted: #5c6470;
+    --faint: #8a919c;
+    --accent: #0f6b5c;
+    --accent-soft: #e3f0ed;
+    --border: #e4e2dd;
+    --tag-bg: #f0efeb;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101214;
+      --surface: #16191c;
+      --text: #e8e6e1;
+      --muted: #a3a9b3;
+      --faint: #6f7681;
+      --accent: #4fb8a2;
+      --accent-soft: #16302b;
+      --border: #262a2f;
+      --tag-bg: #1e2226;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header { padding: 28px 0 0; }
+  .nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .nav .name { font-weight: 700; font-size: 17px; color: var(--text); letter-spacing: -0.01em; }
+  .nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+  .nav ul a { color: var(--muted); font-size: 14.5px; font-weight: 500; }
+  .nav ul a:hover { color: var(--accent); text-decoration: none; }
+
+  .hero { padding: 72px 0 56px; }
+  .hero h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; margin: 0 0 16px; }
+  .hero .role { color: var(--accent); }
+  .hero p { max-width: 620px; font-size: 17.5px; color: var(--muted); margin: 0 0 26px; }
+  .hero .links { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .btn {
+    display: inline-block; padding: 9px 18px; border-radius: 8px;
+    font-size: 14.5px; font-weight: 600;
+    background: var(--accent); color: #fff;
+  }
+  .btn:hover { text-decoration: none; filter: brightness(1.08); }
+  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  section { padding: 40px 0; border-top: 1px solid var(--border); }
+  h2 {
+    font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--faint); margin: 0 0 28px;
+  }
+
+  .job { margin-bottom: 34px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; }
+  .job-head h3 { font-size: 17px; font-weight: 600; margin: 0; letter-spacing: -0.01em; }
+  .job-head .org { color: var(--accent); }
+  .job-head .when { font-size: 13.5px; color: var(--faint); font-family: "JetBrains Mono", monospace; }
+  .job .sub { font-size: 14.5px; color: var(--faint); margin: 2px 0 10px; }
+  .job ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+  .job li { margin-bottom: 7px; }
+  .job li strong { color: var(--text); font-weight: 600; }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .card .top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .card h3 { font-size: 16.5px; font-weight: 600; margin: 0; letter-spacing: -0.01em; }
+  .status {
+    font-size: 11.5px; font-weight: 600; padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+    background: var(--accent-soft); color: var(--accent);
+  }
+  .status.soon { background: var(--tag-bg); color: var(--faint); }
+  .card p { margin: 0; font-size: 14.5px; color: var(--muted); flex: 1; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags span {
+    font-size: 12px; font-family: "JetBrains Mono", monospace; color: var(--muted);
+    background: var(--tag-bg); padding: 3px 8px; border-radius: 6px;
+  }
+  .card .card-links { font-size: 14px; font-weight: 500; }
+
+  .skills { display: grid; grid-template-columns: 140px 1fr; gap: 10px 20px; font-size: 15px; }
+  @media (max-width: 640px) { .skills { grid-template-columns: 1fr; gap: 2px 0; } .skills dd { margin-bottom: 12px; } }
+  .skills dt { font-weight: 600; color: var(--text); }
+  .skills dd { margin: 0; color: var(--muted); }
+
+  .edu { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; margin-bottom: 18px; }
+  .edu:last-child { margin-bottom: 0; }
+  .edu h3 { font-size: 16px; font-weight: 600; margin: 0; }
+  .edu .detail { font-size: 14.5px; color: var(--muted); margin-top: 2px; }
+  .edu .when { font-size: 13.5px; color: var(--faint); font-family: "JetBrains Mono", monospace; }
+
+  footer { padding: 44px 0 56px; border-top: 1px solid var(--border); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 14px; color: var(--faint); }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <nav class="nav">
+    <span class="name">Anay Patel</span>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="https://github.com/AnayPatel-P">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/anay-patel26/">LinkedIn</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <h1>Data science &amp; machine learning,<br><span class="role">built for production.</span></h1>
+    <p>I'm a Data Science Associate at Wio Bank and an MS Business Analytics &amp; AI candidate at UT Austin. I build ML systems for finance — credit scoring, transaction intelligence, and LLM assistants with guardrails that keep every number traceable to real data.</p>
+    <div class="links">
+      <a class="btn" href="mailto:anay.patel1118@gmail.com">Get in touch</a>
+      <a class="btn ghost" href="resume.pdf">Resume</a>
+    </div>
+  </div>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Data Science Associate · <span class="org">Wio Bank</span></h3>
+          <span class="when">Aug 2024 — Present</span>
+        </div>
+        <p class="sub">Digital platform bank · Dubai, UAE</p>
+        <ul>
+          <li>Architected a bank-grade <strong>financial-health scoring engine</strong> (Spend/Save/Grow + composite) as a deterministic function of transaction history — fully explainable, with counterfactual "what-if" insights.</li>
+          <li>Built an 8-tier hybrid <strong>transaction-categorization cascade</strong> (rules, audited MCC mapping, per-customer caching, LLM tail fallback) reaching ~94% deterministic coverage on real customer data.</li>
+          <li>Built a chat-first <strong>AI personal-finance assistant</strong> on a three-service async platform (FastAPI, MongoDB, Kafka) backed by ~20 deterministic financial engines.</li>
+          <li>Integrated the bank's live <strong>~317M-row transaction pipeline</strong> (core banking → Kafka → MongoDB → Delta Lake) with a number-fidelity layer guaranteeing every figure in LLM output traces to a tool-computed payload.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>Machine Learning Intern · <span class="org">Wio Bank</span></h3>
+          <span class="when">2024 — 2025</span>
+        </div>
+        <ul>
+          <li>Engineered a production <strong>XGBoost credit-scoring model</strong> on internal transaction and behavioral data — cut third-party bureau reliance by 40% at 85%+ AUC on holdout sets.</li>
+          <li>Built <strong>SME customer segmentation</strong> (K-means, hierarchical clustering) surfacing behavioral archetypes that shaped product targeting across the SME portfolio.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h3>CEO Presidential Associate Intern, Data Science · <span class="org">The Estée Lauder Companies</span></h3>
+          <span class="when">2024 — 2025</span>
+        </div>
+        <p class="sub">New York, NY</p>
+        <ul>
+          <li>Designed an <strong>NLP sentiment + sales-trend forecasting</strong> model integrating social signals with historical sales — ~40% analyst-workflow productivity gain via automated insight generation.</li>
+          <li>Engineered a <strong>price-elasticity pipeline</strong> (SARIMAX + Bayesian inference) identifying profit-maximizing price points, informing executive pricing strategy.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="grid">
+
+        <div class="card">
+          <div class="top"><h3>Credit-Risk ML System</h3><span class="status">In progress</span></div>
+          <p>End-to-end deployed ML on real public lending data: training pipeline with experiment tracking, FastAPI model service, Docker, CI, and a live monitored endpoint.</p>
+          <div class="tags"><span>Python</span><span>XGBoost</span><span>FastAPI</span><span>Docker</span><span>MLflow</span></div>
+        </div>
+
+        <div class="card">
+          <div class="top"><h3>Bayesian College Football Ratings</h3><span class="status soon">Planned</span></div>
+          <p>Hierarchical Bayesian team-strength model with calibrated win probabilities on live College Football Data API data — statistical rigor over dashboard gloss.</p>
+          <div class="tags"><span>Python</span><span>PyMC</span><span>Bayesian</span><span>CFBD API</span></div>
+        </div>
+
+        <div class="card">
+          <div class="top"><h3>MarketLens</h3><span class="status soon">Rebuilding</span></div>
+          <p>Real-time stock watchlist — candlestick charts, live WebSocket price streaming, technical indicators — being rebuilt with a volatility-forecasting component.</p>
+          <div class="tags"><span>FastAPI</span><span>React</span><span>TypeScript</span><span>WebSockets</span><span>Docker</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Modeling</dt><dd>Python, PyTorch, scikit-learn, XGBoost, pandas, NumPy, R, statistical modeling, time-series forecasting</dd>
+        <dt>Systems</dt><dd>FastAPI, Docker, Kafka, MongoDB, SQL, Delta Lake, Azure, Git</dd>
+        <dt>Analytics</dt><dd>Power BI, Tableau, Excel, experiment design, Bayesian inference</dd>
+        <dt>Languages</dt><dd>Python, R, SQL, C++, C#, TypeScript</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="edu">
+        <div>
+          <h3>The University of Texas at Austin — McCombs School of Business</h3>
+          <div class="detail">MS, Business Analytics &amp; Artificial Intelligence</div>
+        </div>
+        <span class="when">May 2028</span>
+      </div>
+      <div class="edu">
+        <div>
+          <h3>The University of Texas at Austin — College of Natural Sciences</h3>
+          <div class="detail">BS Mathematics, Minor in Statistics &amp; Data Science · GPA 3.93</div>
+        </div>
+        <span class="when">May 2026</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Anay Patel</span>
+    <span>
+      <a href="mailto:anay.patel1118@gmail.com">Email</a> ·
+      <a href="https://github.com/AnayPatel-P">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/anay-patel26/">LinkedIn</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
