@@ -1,264 +1,276 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anay Patel — Data Science & ML</title>
-<meta name="description" content="Anay Patel — data scientist and ML engineer. Data Science Associate at Wio Bank, MS Business Analytics & AI at UT Austin.">
+<title>Anay Patel — ML &amp; AI Engineering</title>
+<meta name="description" content="Anay Patel builds ML and AI systems for finance, and designed his own Claude toolkit for planning, designing and shipping them.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F7F5EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14171B" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #fafaf8;
-    --surface: #ffffff;
-    --text: #1a1d21;
-    --muted: #5c6470;
-    --faint: #8a919c;
-    --accent: #0f6b5c;
-    --accent-soft: #e3f0ed;
-    --border: #e4e2dd;
-    --tag-bg: #f0efeb;
-    color-scheme: light dark;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #101214;
-      --surface: #16191c;
-      --text: #e8e6e1;
-      --muted: #a3a9b3;
-      --faint: #6f7681;
-      --accent: #4fb8a2;
-      --accent-soft: #16302b;
-      --border: #262a2f;
-      --tag-bg: #1e2226;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: 16px;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
-  .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  header { padding: 28px 0 0; }
-  .nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-  .nav .name { font-weight: 700; font-size: 17px; color: var(--text); letter-spacing: -0.01em; }
-  .nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
-  .nav ul a { color: var(--muted); font-size: 14.5px; font-weight: 500; }
-  .nav ul a:hover { color: var(--accent); text-decoration: none; }
-
-  .hero { padding: 72px 0 56px; }
-  .hero h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; margin: 0 0 16px; }
-  .hero .role { color: var(--accent); }
-  .hero p { max-width: 620px; font-size: 17.5px; color: var(--muted); margin: 0 0 26px; }
-  .hero .links { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
-  .btn {
-    display: inline-block; padding: 9px 18px; border-radius: 8px;
-    font-size: 14.5px; font-weight: 600;
-    background: var(--accent); color: #fff;
-  }
-  .btn:hover { text-decoration: none; filter: brightness(1.08); }
-  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
-  .btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
-
-  section { padding: 40px 0; border-top: 1px solid var(--border); }
-  h2 {
-    font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--faint); margin: 0 0 28px;
-  }
-
-  .job { margin-bottom: 34px; }
-  .job:last-child { margin-bottom: 0; }
-  .job-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; }
-  .job-head h3 { font-size: 17px; font-weight: 600; margin: 0; letter-spacing: -0.01em; }
-  .job-head .org { color: var(--accent); }
-  .job-head .when { font-size: 13.5px; color: var(--faint); font-family: "JetBrains Mono", monospace; }
-  .job .sub { font-size: 14.5px; color: var(--faint); margin: 2px 0 10px; }
-  .job ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
-  .job li { margin-bottom: 7px; }
-  .job li strong { color: var(--text); font-weight: 600; }
-
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
-  .card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-    padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 10px;
-  }
-  .card .top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-  .card h3 { font-size: 16.5px; font-weight: 600; margin: 0; letter-spacing: -0.01em; }
-  .status {
-    font-size: 11.5px; font-weight: 600; padding: 3px 9px; border-radius: 999px; white-space: nowrap;
-    background: var(--accent-soft); color: var(--accent);
-  }
-  .status.soon { background: var(--tag-bg); color: var(--faint); }
-  .card p { margin: 0; font-size: 14.5px; color: var(--muted); flex: 1; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tags span {
-    font-size: 12px; font-family: "JetBrains Mono", monospace; color: var(--muted);
-    background: var(--tag-bg); padding: 3px 8px; border-radius: 6px;
-  }
-  .card .card-links { font-size: 14px; font-weight: 500; }
-
-  .skills { display: grid; grid-template-columns: 140px 1fr; gap: 10px 20px; font-size: 15px; }
-  @media (max-width: 640px) { .skills { grid-template-columns: 1fr; gap: 2px 0; } .skills dd { margin-bottom: 12px; } }
-  .skills dt { font-weight: 600; color: var(--text); }
-  .skills dd { margin: 0; color: var(--muted); }
-
-  .edu { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; margin-bottom: 18px; }
-  .edu:last-child { margin-bottom: 0; }
-  .edu h3 { font-size: 16px; font-weight: 600; margin: 0; }
-  .edu .detail { font-size: 14.5px; color: var(--muted); margin-top: 2px; }
-  .edu .when { font-size: 13.5px; color: var(--faint); font-family: "JetBrains Mono", monospace; }
-
-  footer { padding: 44px 0 56px; border-top: 1px solid var(--border); }
-  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 14px; color: var(--faint); }
-  footer a { color: var(--muted); }
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap"></noscript>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 16h28' stroke='%232450A6' stroke-width='5' stroke-linecap='round'/%3E%3Crect x='9' y='5' width='14' height='22' rx='7' fill='%23F7F5EF' stroke='%231B1F24' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
 </head>
 <body>
 
-<header class="wrap">
-  <nav class="nav">
-    <span class="name">Anay Patel</span>
+<a href="#main" class="skip">Skip to content</a>
+
+<header class="bar">
+  <nav aria-label="Primary">
+    <a class="name" href="#top">Anay Patel</a>
     <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#method">How I build</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="https://github.com/AnayPatel-P">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/anay-patel26/">LinkedIn</a></li>
+      <li><a href="resume.pdf">Resume</a></li>
     </ul>
   </nav>
 </header>
 
-<main>
-  <div class="hero wrap">
-    <h1>Data science &amp; machine learning,<br><span class="role">built for production.</span></h1>
-    <p>I'm a Data Science Associate at Wio Bank and an MS Business Analytics &amp; AI candidate at UT Austin. I build ML systems for finance — credit scoring, transaction intelligence, and LLM assistants with guardrails that keep every number traceable to real data.</p>
-    <div class="links">
-      <a class="btn" href="mailto:anay.patel1118@gmail.com">Get in touch</a>
-      <a class="btn ghost" href="resume.pdf">Resume</a>
+<main id="main" class="page">
+
+  <!-- ================= HERO ================= -->
+  <section id="top" class="hero entry" aria-labelledby="hero-title">
+    <div class="margin" aria-hidden="true">
+      <span class="t-mono">Entry 001</span>
+      <span class="t-mono">Dubai · Austin</span>
     </div>
-  </div>
+    <div class="main">
+      <p class="t-mono" style="margin:0 0 1rem">ML &amp; AI engineer · Data Science at Wio Bank · MS BA&amp;AI, UT Austin</p>
+      <h1 id="hero-title" class="t-display">I build ML systems for finance, and the <em>AI&nbsp;toolkit</em> I use to ship them.</h1>
+      <p class="t-lede">Credit scoring, transaction intelligence and LLM assistants whose every number traces back to real data. Off the clock I design Claude skills that take an idea to a shipped product: plan, design, build, verify.</p>
+      <p class="actions">
+        <a class="btn" href="resume.pdf">Resume <span aria-hidden="true">→</span></a>
+        <a class="textlink" href="mailto:anay.patel1118@gmail.com">Email</a>
+        <a class="textlink" href="https://github.com/AnayPatel-P">GitHub</a>
+        <a class="textlink" href="https://www.linkedin.com/in/anay-patel26/">LinkedIn</a>
+      </p>
+    </div>
+  </section>
 
-  <section id="experience">
-    <div class="wrap">
-      <h2>Experience</h2>
+  <!-- ================= WORK ================= -->
+  <section id="work" class="chapter" aria-labelledby="work-title">
+    <div class="entry chapter-head">
+      <div class="margin" aria-hidden="true"><span class="t-mono">§ 1</span></div>
+      <div class="main">
+        <h2 id="work-title" class="t-h2">Selected work</h2>
+        <p>Three projects, with honest status. The colored lines show which of my skills built each one.</p>
+      </div>
+    </div>
 
-      <div class="job">
-        <div class="job-head">
-          <h3>Data Science Associate · <span class="org">Wio Bank</span></h3>
-          <span class="when">Aug 2024 — Present</span>
-        </div>
-        <p class="sub">Digital platform bank · Dubai, UAE</p>
+    <article class="project entry" id="p-investedge" data-skills="project-manager original-ui">
+      <div class="margin">
+        <span class="stamp live">Live</span>
+        <span class="t-mono" aria-hidden="true">Nov 2026</span>
+        <span class="t-mono" aria-hidden="true">Fig. 2</span>
+      </div>
+      <div class="main">
+        <h3 class="t-h3">InvestEdge</h3>
+        <p class="summary">Forecasting, honestly. An educational stock app that runs four forecasting models on every S&amp;P&nbsp;500 stock, then replays a year of their old forecasts against what really happened.</p>
+        <p class="detail t-small">Nightly GitHub Actions pipeline → DuckDB → ~3,000 static JSON files → React on GitHub Pages. ARIMA, ETS, Prophet and GARCH, backtested with a leakage test. Signature interaction, “Rewind &amp; Release”: drag back in time and watch reality draw itself through the fan of forecasts. Optional Claude tutor that looks numbers up instead of guessing and declines buy/sell questions.</p>
+        <figure>
+          <img src="assets/rewind-and-release.jpg" width="800" height="500" alt="InvestEdge chart rewound to a past date, showing a fan of possible futures with the real price drawn through it" loading="lazy" decoding="async">
+          <figcaption class="t-mono">Fig. 2 · Rewind &amp; Release</figcaption>
+        </figure>
+        <ul class="tags" aria-label="Stack"><li>Python</li><li>DuckDB</li><li>statsforecast · Prophet · arch</li><li>React</li><li>FastAPI</li><li>Claude API</li><li>GitHub Actions</li></ul>
+        <p class="built"><span>Built with</span>
+          <a class="line-tag" style="--c:var(--l-project-manager)" href="#s-project-manager" data-skill="project-manager">project-manager</a>
+          <a class="line-tag" style="--c:var(--l-original-ui)" href="#s-original-ui" data-skill="original-ui">original-ui</a>
+        </p>
+        <p class="links"><a href="https://anaypatel-p.github.io/investedge/">Live demo ↗</a><a href="https://github.com/AnayPatel-P/investedge">Source ↗</a></p>
+      </div>
+    </article>
+
+    <article class="project entry" id="p-plotted" data-skills="project-manager original-ui">
+      <div class="margin">
+        <span class="stamp soon">Deploying soon</span>
+        <span class="t-mono" aria-hidden="true">Nov 2026</span>
+      </div>
+      <div class="main">
+        <h3 class="t-h3">Plotted</h3>
+        <p class="summary">Plan your degree semester by semester against your school’s real catalog. Starting with UT&nbsp;Austin (Math, CS) and Texas&nbsp;A&amp;M (Data Engineering).</p>
+        <p class="detail t-small">Python scrapers parse CourseLeaf catalogs into rule trees; anything they can’t express goes to a human-reviewed override queue. A TypeScript requirement and prerequisite engine runs in the browser and flags critical paths and graduation delays. Optional Google sign-in and sync on Supabase with row-level-security tests. Lighthouse 100, 0 axe violations.</p>
+        <ul class="tags" aria-label="Stack"><li>Next.js</li><li>TypeScript</li><li>zod</li><li>Python scrapers</li><li>Supabase</li><li>Playwright</li></ul>
+        <p class="built"><span>Built with</span>
+          <a class="line-tag" style="--c:var(--l-project-manager)" href="#s-project-manager" data-skill="project-manager">project-manager</a>
+          <a class="line-tag" style="--c:var(--l-original-ui)" href="#s-original-ui" data-skill="original-ui">original-ui</a>
+        </p>
+        <p class="links"><a href="https://github.com/AnayPatel-P/plotted">Source ↗</a></p>
+      </div>
+    </article>
+
+    <article class="project entry" id="p-marketlens" data-skills="">
+      <div class="margin">
+        <span class="stamp rebuild">Rebuilding</span>
+        <span class="t-mono" aria-hidden="true">May 2026</span>
+      </div>
+      <div class="main">
+        <h3 class="t-h3">MarketLens</h3>
+        <p class="summary">A real-time stock watchlist with candlestick charts, moving averages and live price streaming.</p>
+        <p class="detail t-small">FastAPI backend serving REST and WebSocket routes over yfinance; React + TypeScript front end with TradingView Lightweight Charts; Nginx reverse proxy; one-command Docker Compose. Being rebuilt with a volatility-forecasting component.</p>
+        <ul class="tags" aria-label="Stack"><li>FastAPI</li><li>WebSockets</li><li>React</li><li>TypeScript</li><li>Docker</li></ul>
+        <p class="built">Built by hand, before the toolkit existed.</p>
+        <p class="links"><a href="https://github.com/AnayPatel-P/MarketLens">Source ↗</a></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= METHOD ================= -->
+  <section id="method" class="chapter" aria-labelledby="method-title">
+    <div class="entry chapter-head">
+      <div class="margin" aria-hidden="true"><span class="t-mono">§ 2</span></div>
+      <div class="main">
+        <h2 id="method-title" class="t-h2">How I build with AI</h2>
+        <p>I don’t just prompt. I write Claude skills: reusable workflows with phases, gates, output contracts and guardrails. Each one encodes a way of working I’d want from a strong teammate.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="margin" aria-hidden="true"><span class="t-mono">Fig. 1</span></div>
+      <div class="main">
+        <figure class="fig" id="fig-line" aria-labelledby="fig-cap">
+          <div class="fig-head">
+            <figcaption id="fig-cap" class="t-mono">Fig. 1 · Idea to shipped, one line per skill</figcaption>
+            <span class="hint" id="fig-hint">Point at a line or pick a skill below to trace it.</span>
+          </div>
+          <!-- Rendered by main.js; this list is the no-JS / screen-reader version -->
+          <ol class="fig-fallback" id="fig-fallback">
+            <li>10 Discover: lightbulb finds a real problem; ai-brief keeps the inputs current.</li>
+            <li>20 Plan: project-manager scopes it into a PRD and gated roadmap.</li>
+            <li>30 Design: original-ui creates the concept.</li>
+            <li>40 Build: phase by phase, with teach and agent-builder feeding in.</li>
+            <li>50 Shipped: InvestEdge and Plotted.</li>
+          </ol>
+        </figure>
+
+        <ul class="skills" id="skills">
+          <li class="skill" id="s-lightbulb" data-skill="lightbulb" style="--c:var(--l-lightbulb)">
+            <h3><button class="trace" type="button" aria-pressed="false" aria-controls="fig-line">lightbulb</button></h3>
+            <span class="role t-mono">Discover</span>
+            <p>Evidence-based idea generation. Mines Reddit, Hacker News, forums and reviews for problems people actually complain about, checks each against existing products, and ranks the gaps. No idea makes the report without evidence links.</p>
+            <p class="route">10 Discover → 20 Plan</p>
+          </li>
+          <li class="skill" id="s-project-manager" data-skill="project-manager" style="--c:var(--l-project-manager)">
+            <h3><button class="trace" type="button" aria-pressed="false" aria-controls="fig-line">project-manager</button></h3>
+            <span class="role t-mono">Plan &amp; build</span>
+            <p>Takes a raw idea to a shipped product through gated phases: clarifying questions, a MoSCoW-prioritized PRD, a roadmap where every phase ends in a demo, then build with check-ins. New asks go through a change-request flow instead of creeping in.</p>
+            <p class="route">20 Plan → 30 Design → 40 Build → 50 Shipped</p>
+          </li>
+          <li class="skill" id="s-original-ui" data-skill="original-ui" style="--c:var(--l-original-ui)">
+            <h3><button class="trace" type="button" aria-pressed="false" aria-controls="fig-line">original-ui</button></h3>
+            <span class="role t-mono">Design</span>
+            <p>Interviews for the feel you want, researches real interfaces, and combines them into a concept nobody’s seen. It then holds that concept to Apple-grade craft: purpose-driven hierarchy, interruptible motion, designed states, accessibility. This page was made with it.</p>
+            <p class="route">30 Design → 40 Build → 50 Shipped</p>
+          </li>
+          <li class="skill" id="s-agent-builder" data-skill="agent-builder" style="--c:var(--l-agent-builder)">
+            <h3><button class="trace" type="button" aria-pressed="false" aria-controls="fig-line">agent-builder</button></h3>
+            <span class="role t-mono">Agents</span>
+            <p>Turns a task into a well-built agent: a focused role, a system prompt with an output contract, least-privilege tools, the right model, and test cases that prove it works. It suggests changes freely but applies them only with consent.</p>
+            <p class="route">feeds 40 Build</p>
+          </li>
+          <li class="skill" id="s-teach" data-skill="teach" style="--c:var(--l-teach)">
+            <h3><button class="trace" type="button" aria-pressed="false" aria-controls="fig-line">teach</button></h3>
+            <span class="role t-mono">Learn</span>
+            <p>A tutor with three modes: a quick briefing, a project-ready deep dive, or guided questions that map what you already know before teaching what you don’t.</p>
+            <p class="route">feeds 40 Build</p>
+          </li>
+          <li class="skill" id="s-ai-brief" data-skill="ai-brief" style="--c:var(--l-ai-brief)">
+            <h3><button class="trace" type="button" aria-pressed="false" aria-controls="fig-line">ai-brief</button></h3>
+            <span class="role t-mono">Stay current</span>
+            <p>My daily AI newsletter. Three scout sub-agents each sweep one beat (labs, papers, GitHub, forums) and verify every item against a primary source. The skill then writes an issue with a concept, an exercise and a paper explained.</p>
+            <p class="route">feeds 10 Discover</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience" class="chapter" aria-labelledby="exp-title">
+    <div class="entry chapter-head">
+      <div class="margin" aria-hidden="true"><span class="t-mono">§ 3</span></div>
+      <div class="main"><h2 id="exp-title" class="t-h2">Experience</h2></div>
+    </div>
+
+    <article class="job entry">
+      <div class="margin"><span class="t-mono">Aug 2024 – now</span><span class="t-mono">Dubai, UAE</span></div>
+      <div class="main">
+        <h3 class="t-h3">Data Science Associate <span class="org">· Wio Bank</span></h3>
         <ul>
-          <li>Architected a bank-grade <strong>financial-health scoring engine</strong> (Spend/Save/Grow + composite) as a deterministic function of transaction history — fully explainable, with counterfactual "what-if" insights.</li>
+          <li>Architected a bank-grade <strong>financial-health scoring engine</strong> (Spend/Save/Grow + composite) as a deterministic function of transaction history: fully explainable, with counterfactual “what-if” insights.</li>
           <li>Built an 8-tier hybrid <strong>transaction-categorization cascade</strong> (rules, audited MCC mapping, per-customer caching, LLM tail fallback) reaching ~94% deterministic coverage on real customer data.</li>
           <li>Built a chat-first <strong>AI personal-finance assistant</strong> on a three-service async platform (FastAPI, MongoDB, Kafka) backed by ~20 deterministic financial engines.</li>
-          <li>Integrated the bank's live <strong>~317M-row transaction pipeline</strong> (core banking → Kafka → MongoDB → Delta Lake) with a number-fidelity layer guaranteeing every figure in LLM output traces to a tool-computed payload.</li>
+          <li>Integrated the bank’s live <strong>~317M-row transaction pipeline</strong> (core banking → Kafka → MongoDB → Delta Lake) with a number-fidelity layer guaranteeing every figure in LLM output traces to a tool-computed payload.</li>
         </ul>
       </div>
+    </article>
 
-      <div class="job">
-        <div class="job-head">
-          <h3>Machine Learning Intern · <span class="org">Wio Bank</span></h3>
-          <span class="when">2024 — 2025</span>
-        </div>
+    <article class="job entry">
+      <div class="margin"><span class="t-mono">2024 – 2025</span></div>
+      <div class="main">
+        <h3 class="t-h3">Machine Learning Intern <span class="org">· Wio Bank</span></h3>
         <ul>
-          <li>Engineered a production <strong>XGBoost credit-scoring model</strong> on internal transaction and behavioral data — cut third-party bureau reliance by 40% at 85%+ AUC on holdout sets.</li>
-          <li>Built <strong>SME customer segmentation</strong> (K-means, hierarchical clustering) surfacing behavioral archetypes that shaped product targeting across the SME portfolio.</li>
+          <li>Engineered a production <strong>XGBoost credit-scoring model</strong> on internal transaction and behavioral data: cut third-party bureau reliance by 40% at 85%+ AUC on holdout sets.</li>
+          <li>Built <strong>SME customer segmentation</strong> (K-means, hierarchical clustering) surfacing behavioral archetypes that shaped product targeting.</li>
         </ul>
       </div>
+    </article>
 
-      <div class="job">
-        <div class="job-head">
-          <h3>CEO Presidential Associate Intern, Data Science · <span class="org">The Estée Lauder Companies</span></h3>
-          <span class="when">2024 — 2025</span>
-        </div>
-        <p class="sub">New York, NY</p>
+    <article class="job entry">
+      <div class="margin"><span class="t-mono">2024 – 2025</span><span class="t-mono">New York, NY</span></div>
+      <div class="main">
+        <h3 class="t-h3">CEO Presidential Associate Intern, Data Science <span class="org">· The Estée Lauder Companies</span></h3>
         <ul>
-          <li>Designed an <strong>NLP sentiment + sales-trend forecasting</strong> model integrating social signals with historical sales — ~40% analyst-workflow productivity gain via automated insight generation.</li>
-          <li>Engineered a <strong>price-elasticity pipeline</strong> (SARIMAX + Bayesian inference) identifying profit-maximizing price points, informing executive pricing strategy.</li>
+          <li>Designed an <strong>NLP sentiment + sales-trend forecasting</strong> model integrating social signals with historical sales: ~40% analyst-workflow productivity gain via automated insight generation.</li>
+          <li>Engineered a <strong>price-elasticity pipeline</strong> (SARIMAX + Bayesian inference) identifying profit-maximizing price points for executive pricing strategy.</li>
+        </ul>
+      </div>
+    </article>
+
+    <div class="entry">
+      <div class="margin" aria-hidden="true"><span class="t-mono">Education</span></div>
+      <div class="main">
+        <h3 class="t-h3 visually-hidden">Education</h3>
+        <ul class="edu">
+          <li><strong>MS, Business Analytics &amp; AI</strong>, UT Austin McCombs <span class="t-mono">May 2028</span></li>
+          <li><strong>BS Mathematics</strong>, minor in Statistics &amp; Data Science, UT Austin <span class="t-mono">May 2026 · GPA 3.93</span></li>
         </ul>
       </div>
     </div>
-  </section>
 
-  <section id="projects">
-    <div class="wrap">
-      <h2>Projects</h2>
-      <div class="grid">
-
-        <div class="card">
-          <div class="top"><h3>Credit-Risk ML System</h3><span class="status">In progress</span></div>
-          <p>End-to-end deployed ML on real public lending data: training pipeline with experiment tracking, FastAPI model service, Docker, CI, and a live monitored endpoint.</p>
-          <div class="tags"><span>Python</span><span>XGBoost</span><span>FastAPI</span><span>Docker</span><span>MLflow</span></div>
-        </div>
-
-        <div class="card">
-          <div class="top"><h3>Bayesian College Football Ratings</h3><span class="status soon">Planned</span></div>
-          <p>Hierarchical Bayesian team-strength model with calibrated win probabilities on live College Football Data API data — statistical rigor over dashboard gloss.</p>
-          <div class="tags"><span>Python</span><span>PyMC</span><span>Bayesian</span><span>CFBD API</span></div>
-        </div>
-
-        <div class="card">
-          <div class="top"><h3>MarketLens</h3><span class="status soon">Rebuilding</span></div>
-          <p>Real-time stock watchlist — candlestick charts, live WebSocket price streaming, technical indicators — being rebuilt with a volatility-forecasting component.</p>
-          <div class="tags"><span>FastAPI</span><span>React</span><span>TypeScript</span><span>WebSockets</span><span>Docker</span></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="wrap">
-      <h2>Skills</h2>
-      <dl class="skills">
-        <dt>Modeling</dt><dd>Python, PyTorch, scikit-learn, XGBoost, pandas, NumPy, R, statistical modeling, time-series forecasting</dd>
-        <dt>Systems</dt><dd>FastAPI, Docker, Kafka, MongoDB, SQL, Delta Lake, Azure, Git</dd>
-        <dt>Analytics</dt><dd>Power BI, Tableau, Excel, experiment design, Bayesian inference</dd>
-        <dt>Languages</dt><dd>Python, R, SQL, C++, C#, TypeScript</dd>
-      </dl>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="wrap">
-      <h2>Education</h2>
-      <div class="edu">
-        <div>
-          <h3>The University of Texas at Austin — McCombs School of Business</h3>
-          <div class="detail">MS, Business Analytics &amp; Artificial Intelligence</div>
-        </div>
-        <span class="when">May 2028</span>
-      </div>
-      <div class="edu">
-        <div>
-          <h3>The University of Texas at Austin — College of Natural Sciences</h3>
-          <div class="detail">BS Mathematics, Minor in Statistics &amp; Data Science · GPA 3.93</div>
-        </div>
-        <span class="when">May 2026</span>
+    <div class="entry" style="margin-top:3rem">
+      <div class="margin" aria-hidden="true"><span class="t-mono">Toolbox</span></div>
+      <div class="main">
+        <h3 class="t-h3 visually-hidden">Toolbox</h3>
+        <dl class="toolbox">
+          <dt>Modeling</dt><dd>Python, PyTorch, scikit-learn, XGBoost, pandas, statistical modeling, time-series forecasting, Bayesian inference</dd>
+          <dt>Systems</dt><dd>FastAPI, Docker, Kafka, MongoDB, SQL, Delta Lake, DuckDB, Azure, Git</dd>
+          <dt>AI</dt><dd>Claude API &amp; Agent SDK, tool use, guardrails &amp; number fidelity, evals, Claude Code skills &amp; subagents</dd>
+          <dt>Languages</dt><dd>Python, R, SQL, TypeScript, C++, C#</dd>
+        </dl>
       </div>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© 2026 Anay Patel</span>
-    <span>
-      <a href="mailto:anay.patel1118@gmail.com">Email</a> ·
-      <a href="https://github.com/AnayPatel-P">GitHub</a> ·
-      <a href="https://www.linkedin.com/in/anay-patel26/">LinkedIn</a>
-    </span>
+<footer class="page">
+  <div class="foot entry">
+    <div class="margin" aria-hidden="true"><span class="t-mono">End of entries</span></div>
+    <div class="main">
+      <h2 class="t-h2">Let’s talk.</h2>
+      <p class="actions">
+        <a class="btn" href="mailto:anay.patel1118@gmail.com">anay.patel1118@gmail.com</a>
+        <a class="textlink" href="resume.pdf">Resume</a>
+        <a class="textlink" href="https://github.com/AnayPatel-P">GitHub</a>
+        <a class="textlink" href="https://www.linkedin.com/in/anay-patel26/">LinkedIn</a>
+      </p>
+      <p class="t-mono">© 2026 Anay Patel · Designed with original-ui, planned with project-manager</p>
+    </div>
   </div>
 </footer>
 
