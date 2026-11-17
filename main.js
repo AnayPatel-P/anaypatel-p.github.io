@@ -32,6 +32,7 @@
   const PROJECTS = [
     { name: "InvestEdge", href: "#p-investedge", skills: ["project-manager", "original-ui"] },
     { name: "Plotted",    href: "#p-plotted",    skills: ["project-manager", "original-ui"] },
+    { name: "MarketLens", href: "#p-marketlens", skills: ["project-manager", "original-ui"] },
   ];
 
   const NS = "http://www.w3.org/2000/svg";
@@ -132,7 +133,7 @@
       else {
         const built = PROJECTS.filter((p) => p.skills.includes(skill)).map((p) => p.name);
         const stops = STATIONS.filter((s) => s.skills.includes(skill)).map((s) => s.name);
-        hint.textContent = `${skill}: ${stops.join(" → ")}` + (built.length ? ` · built ${built.join(" & ")}` : "");
+        hint.textContent = `${skill}: ${stops.join(" → ")}` + (built.length ? ` · built ${new Intl.ListFormat("en", { type: "conjunction" }).format(built)}` : "");
       }
     }
   }

@@ -14,6 +14,8 @@
 - 2026-11-17 — Phase 4: perf fix (fonts), favicon, 200%-text nav/button fixes, factual corrections, README.
 - 2026-11-17 — Merged redesign → main (1b6359f) and pushed; GitHub Pages build succeeded; live at https://anaypatel-p.github.io.
 - 2026-11-17 — Plotted v1 confirmed live (plotted-cyan.vercel.app): stamp → Live, live-app link added on site and profile README.
+- 2026-11-17 — MarketLens v1 shipped (marketlens-live.fly.dev, built with project-manager + original-ui): card rewritten, Live stamp, Fig. 4 screenshot, added to Fig. 1 Shipped. Plotted screenshot refreshed (v2 answer line, TAMU Data Engineering). Tracing no longer drops card text below AA contrast.
+- 2026-11-17 — InvestEdge "Recording Drum" redesign deployed (80a19b5); Fig. 2 screenshot and card copy updated to match.
 
 ## PRD acceptance check
 - F1 hero + resume/contact ✅ · F2 projects with honest chips + links ✅ · F3 six skills with excerpts ✅ · F4 pipeline diagram ✅ · F5 skills↔projects tracing ✅ · F6 experience ✅ · F7 light/dark, responsive, reduced motion, a11y ✅ · F8 layered scan/detail ✅

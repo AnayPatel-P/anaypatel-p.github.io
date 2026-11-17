@@ -59,7 +59,7 @@
       <div class="margin" aria-hidden="true"><span class="t-mono">§ 1</span></div>
       <div class="main">
         <h2 id="work-title" class="t-h2">Selected work</h2>
-        <p>Three projects, with honest status. The colored lines show which of my skills built each one.</p>
+        <p>Three shipped projects. The colored lines show which of my skills built each one.</p>
       </div>
     </div>
 
@@ -72,10 +72,10 @@
       <div class="main">
         <h3 class="t-h3">InvestEdge</h3>
         <p class="summary">Forecasting, honestly. An educational stock app that runs four forecasting models on every S&amp;P&nbsp;500 stock, then replays a year of their old forecasts against what really happened.</p>
-        <p class="detail t-small">Nightly GitHub Actions pipeline → DuckDB → ~3,000 static JSON files → React on GitHub Pages. ARIMA, ETS, Prophet and GARCH, backtested with a leakage test. Signature interaction, “Rewind &amp; Release”: drag back in time and watch reality draw itself through the fan of forecasts. Optional Claude tutor that looks numbers up instead of guessing and declines buy/sell questions.</p>
+        <p class="detail t-small">Nightly GitHub Actions pipeline → DuckDB → ~3,000 static JSON files → React on GitHub Pages. ARIMA, ETS, Prophet and GARCH, backtested with a leakage test. Signature interaction, “Rewind &amp; Release”: the chart works like a barograph drum. Drag or flick it back to a past forecast date (1:1 tracking, spring snap, rubber-band ends), and the models’ futures are pencilled in while reality inks itself through them. An outlook strip counts how many of those futures end higher, next to the model’s real track record. Optional Claude tutor that looks numbers up instead of guessing and declines buy/sell questions.</p>
         <figure>
-          <img src="assets/rewind-and-release.jpg" width="800" height="500" alt="InvestEdge chart rewound to a past date, showing a fan of possible futures with the real price drawn through it" loading="lazy" decoding="async">
-          <figcaption class="t-mono">Fig. 2 · Rewind &amp; Release</figcaption>
+          <img src="assets/rewind-and-release.jpg" width="800" height="500" alt="InvestEdge chart turned back to June 3, 2026: a pencilled fan of ARIMA futures with the real price inked through it in violet, and a card noting reality landed inside the 95% range but no closer than the naive guess" loading="lazy" decoding="async">
+          <figcaption class="t-mono">Fig. 2 · Rewind &amp; Release on the recording drum</figcaption>
         </figure>
         <ul class="tags" aria-label="Stack"><li>Python</li><li>DuckDB</li><li>statsforecast · Prophet · arch</li><li>React</li><li>FastAPI</li><li>Claude API</li><li>GitHub Actions</li></ul>
         <p class="built"><span>Built with</span>
@@ -95,10 +95,10 @@
       <div class="main">
         <h3 class="t-h3">Plotted</h3>
         <p class="summary">Plan your degree semester by semester against your school’s real catalog. Starting with UT&nbsp;Austin (Math, CS) and Texas&nbsp;A&amp;M (Data Engineering).</p>
-        <p class="detail t-small">Python scrapers parse CourseLeaf catalogs into rule trees; anything they can’t express goes to a human-reviewed override queue. A TypeScript requirement and prerequisite engine runs in the browser and flags critical paths and graduation delays. Optional Google sign-in and sync on Supabase with row-level-security tests. Lighthouse 100, 0 axe violations.</p>
+        <p class="detail t-small">Python scrapers parse CourseLeaf catalogs into rule trees; anything they can’t express goes to a human-reviewed override queue. A TypeScript requirement and prerequisite engine runs in the browser and flags critical paths and graduation delays. Optional Google sign-in and sync on Supabase with row-level-security tests. Lighthouse 100, 0 axe violations. Now in v2: real start terms, completed semesters and a transfer-credit column.</p>
         <figure>
-          <img src="assets/plotted-planner.webp" width="1000" height="625" alt="Plotted planner for the UT Austin Mathematics degree: semester columns of course stickers, with a requirements checklist stamped Met, Planned and Check" loading="lazy" decoding="async">
-          <figcaption class="t-mono">Fig. 3 · Riso Route planner, UT Math</figcaption>
+          <img src="assets/plotted-planner.webp" width="1000" height="625" alt="Plotted planner for Texas A&amp;M Data Engineering, headed &quot;On track for Year 4 · Spring&quot;, with semester columns of course stickers, two courses flagged No slack, and a requirements checklist marked Met" loading="lazy" decoding="async">
+          <figcaption class="t-mono">Fig. 3 · The answer line, Texas A&amp;M Data Engineering</figcaption>
         </figure>
         <ul class="tags" aria-label="Stack"><li>Next.js</li><li>TypeScript</li><li>zod</li><li>Python scrapers</li><li>Supabase</li><li>Playwright</li></ul>
         <p class="built"><span>Built with</span>
@@ -109,18 +109,26 @@
       </div>
     </article>
 
-    <article class="project entry" id="p-marketlens" data-skills="">
+    <article class="project entry" id="p-marketlens" data-skills="project-manager original-ui">
       <div class="margin">
-        <span class="stamp rebuild">Rebuilding</span>
-        <span class="t-mono" aria-hidden="true">May 2026</span>
+        <span class="stamp live">Live</span>
+        <span class="t-mono" aria-hidden="true">Nov 2026</span>
+        <span class="t-mono" aria-hidden="true">Fig. 4</span>
       </div>
       <div class="main">
         <h3 class="t-h3">MarketLens</h3>
-        <p class="summary">A real-time stock watchlist with candlestick charts, moving averages and live price streaming.</p>
-        <p class="detail t-small">FastAPI backend serving REST and WebSocket routes over yfinance; React + TypeScript front end with TradingView Lightweight Charts; Nginx reverse proxy; one-command Docker Compose. Being rebuilt with a volatility-forecasting component.</p>
-        <ul class="tags" aria-label="Stack"><li>FastAPI</li><li>WebSockets</li><li>React</li><li>TypeScript</li><li>Docker</li></ul>
-        <p class="built">Built by hand, before the toolkit existed.</p>
-        <p class="links"><a href="https://github.com/AnayPatel-P/MarketLens">Source ↗</a></p>
+        <p class="summary">A stock dashboard that writes its own headline. Live watchlist, technical charts and real portfolio P&amp;L, measured against the same money in the S&amp;P&nbsp;500.</p>
+        <p class="detail t-small">Rebuilt from scratch. FastAPI computes indicators and average-cost P&amp;L server-side (Wilder RSI checked against the textbook; Decimal math tested against hand-worked trades). One upstream Alpaca stream fans out to every browser over a shared WebSocket. Watchlists and trades live in Supabase under row-level security, proven by a check against the real project. Scrub the chart and the headline rewrites itself; four switchable “lenses”, all WCAG AA. One-click demo, no sign-up.</p>
+        <figure>
+          <img src="assets/marketlens-analysis.webp" width="1000" height="625" alt="MarketLens analysis view in the Editorial lens: a headline reading &quot;Apple climbed 19% over six months, just below its 52-week high&quot;, a live price, key stats, and a six-month candlestick chart with moving averages, volume and RSI" loading="lazy" decoding="async">
+          <figcaption class="t-mono">Fig. 4 · Self-writing headline, Editorial lens</figcaption>
+        </figure>
+        <ul class="tags" aria-label="Stack"><li>FastAPI</li><li>pandas</li><li>WebSockets</li><li>React</li><li>TypeScript</li><li>Supabase</li><li>Alpaca</li><li>Fly.io</li><li>Playwright</li></ul>
+        <p class="built"><span>Built with</span>
+          <a class="line-tag" style="--c:var(--l-project-manager)" href="#s-project-manager" data-skill="project-manager">project-manager</a>
+          <a class="line-tag" style="--c:var(--l-original-ui)" href="#s-original-ui" data-skill="original-ui">original-ui</a>
+        </p>
+        <p class="links"><a href="https://marketlens-live.fly.dev">Live app ↗</a><a href="https://github.com/AnayPatel-P/MarketLens">Source ↗</a></p>
       </div>
     </article>
   </section>
@@ -149,7 +157,7 @@
             <li>20 Plan: project-manager scopes it into a PRD and gated roadmap.</li>
             <li>30 Design: original-ui creates the concept.</li>
             <li>40 Build: phase by phase, with teach and agent-builder feeding in.</li>
-            <li>50 Shipped: InvestEdge and Plotted.</li>
+            <li>50 Shipped: InvestEdge, Plotted and MarketLens.</li>
           </ol>
         </figure>
 

@@ -277,8 +277,11 @@ section.chapter { padding: var(--s9) 0 var(--s8); }
 .skill .route { margin-top: var(--s3); font: 400 .75rem/1.5 var(--f-mono); color: var(--graphite); letter-spacing: .02em; }
 .skill.is-on::before { transform: scaleX(1.5); }
 .skill.is-on .trace { color: var(--c); }
-.skills.is-tracing .skill:not(.is-on) { opacity: .55; }
-.skills .skill { transition: opacity var(--t-fast) var(--ease); }
+/* dim only the line and the name, so body text keeps AA contrast while tracing */
+.skills.is-tracing .skill:not(.is-on)::before { opacity: .25; }
+.skills.is-tracing .skill:not(.is-on) .trace { color: var(--graphite); }
+.skill::before { transition: transform var(--t-fast) var(--ease), opacity var(--t-fast) var(--ease); }
+.skill .trace { transition: color var(--t-fast) var(--ease); }
 
 /* ---------- experience ---------- */
 .job { padding: var(--s6) 0; border-top: 1px solid var(--rule); }
