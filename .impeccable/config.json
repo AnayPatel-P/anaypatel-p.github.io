@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "nested-cards",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-17T23:01:05.614Z",
+        "reason": "direction contract OWN-WORLD (.impeccable/surfaces/index-html.md): paper specimen cards held in drawer trays inside the cabinet are the concept; rendered scan confirms only this finding"
+      },
+      {
+        "rule": "nested-cards",
+        "value": "*",
+        "files": [
+          "docs/og-card.html"
+        ],
+        "createdAt": "2026-11-17T23:01:05.627Z",
+        "reason": "OG card renders the same cabinet world: specimens in a drawer tray"
+      }
+    ]
+  }
+}

@@ -1,0 +1,649 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T23:09:13+00:00",
+  "title": "Design System: Anay Patel — The Collection Cabinet",
+  "extensions": {
+    "colorMeta": {
+      "brass": {
+        "role": "primary",
+        "displayName": "Cabinet Brass",
+        "canonical": "#C9A653",
+        "tonalRamp": [
+          "oklch(15% 0.054 87)",
+          "oklch(27% 0.071 87)",
+          "oklch(39% 0.088 87)",
+          "oklch(51% 0.104 87)",
+          "oklch(63% 0.099 87)",
+          "oklch(75% 0.082 87)",
+          "oklch(86% 0.067 87)",
+          "oklch(95% 0.054 87)"
+        ],
+        "dark": "#D2B061"
+      },
+      "brass-hi": {
+        "role": "primary",
+        "displayName": "Lit Brass",
+        "canonical": "#E2C77E",
+        "tonalRamp": [
+          "oklch(15% 0.044 88)",
+          "oklch(27% 0.058 88)",
+          "oklch(39% 0.072 88)",
+          "oklch(51% 0.085 88)",
+          "oklch(63% 0.081 88)",
+          "oklch(75% 0.067 88)",
+          "oklch(86% 0.054 88)",
+          "oklch(95% 0.044 88)"
+        ],
+        "dark": "#E6CB86"
+      },
+      "brass-edge": {
+        "role": "primary",
+        "displayName": "Brass Rim",
+        "canonical": "#8F7128",
+        "tonalRamp": [
+          "oklch(15% 0.049 85)",
+          "oklch(27% 0.064 85)",
+          "oklch(39% 0.080 85)",
+          "oklch(51% 0.095 85)",
+          "oklch(63% 0.090 85)",
+          "oklch(75% 0.075 85)",
+          "oklch(86% 0.061 85)",
+          "oklch(95% 0.049 85)"
+        ],
+        "dark": "#8A6C25"
+      },
+      "on-brass": {
+        "role": "primary",
+        "displayName": "Ink on Brass",
+        "canonical": "#14261F",
+        "tonalRamp": [
+          "oklch(15% 0.014 168)",
+          "oklch(27% 0.018 168)",
+          "oklch(39% 0.022 168)",
+          "oklch(51% 0.027 168)",
+          "oklch(63% 0.025 168)",
+          "oklch(75% 0.021 168)",
+          "oklch(86% 0.017 168)",
+          "oklch(95% 0.014 168)"
+        ]
+      },
+      "solid": {
+        "role": "secondary",
+        "displayName": "Collection Green Solid",
+        "canonical": "#1F3A33",
+        "tonalRamp": [
+          "oklch(15% 0.018 175)",
+          "oklch(27% 0.023 175)",
+          "oklch(39% 0.029 175)",
+          "oklch(51% 0.034 175)",
+          "oklch(63% 0.032 175)",
+          "oklch(75% 0.027 175)",
+          "oklch(86% 0.022 175)",
+          "oklch(95% 0.018 175)"
+        ]
+      },
+      "solid-hi": {
+        "role": "secondary",
+        "displayName": "Collection Green Solid, hover",
+        "canonical": "#2D5247",
+        "tonalRamp": [
+          "oklch(15% 0.020 175)",
+          "oklch(27% 0.026 175)",
+          "oklch(39% 0.032 175)",
+          "oklch(51% 0.038 175)",
+          "oklch(63% 0.036 175)",
+          "oklch(75% 0.030 175)",
+          "oklch(86% 0.024 175)",
+          "oklch(95% 0.020 175)"
+        ]
+      },
+      "on-solid": {
+        "role": "secondary",
+        "displayName": "Paper on Solid",
+        "canonical": "#F6F7F3",
+        "tonalRamp": [
+          "oklch(15% 0.002 120)",
+          "oklch(27% 0.003 120)",
+          "oklch(39% 0.004 120)",
+          "oklch(51% 0.005 120)",
+          "oklch(63% 0.004 120)",
+          "oklch(75% 0.004 120)",
+          "oklch(86% 0.003 120)",
+          "oklch(95% 0.002 120)"
+        ]
+      },
+      "live": {
+        "role": "tertiary",
+        "displayName": "Live Green",
+        "canonical": "#1D6A43",
+        "tonalRamp": [
+          "oklch(15% 0.048 157)",
+          "oklch(27% 0.063 157)",
+          "oklch(39% 0.078 157)",
+          "oklch(51% 0.093 157)",
+          "oklch(63% 0.088 157)",
+          "oklch(75% 0.073 157)",
+          "oklch(86% 0.059 157)",
+          "oklch(95% 0.048 157)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Sage Putty Ground",
+        "canonical": "#D5DDD3",
+        "tonalRamp": [
+          "oklch(15% 0.008 139)",
+          "oklch(27% 0.010 139)",
+          "oklch(39% 0.013 139)",
+          "oklch(51% 0.015 139)",
+          "oklch(63% 0.014 139)",
+          "oklch(75% 0.012 139)",
+          "oklch(86% 0.010 139)",
+          "oklch(95% 0.008 139)"
+        ],
+        "dark": "#142822"
+      },
+      "carcass": {
+        "role": "neutral",
+        "displayName": "Carcass",
+        "canonical": "#C3CDC1",
+        "tonalRamp": [
+          "oklch(15% 0.010 140)",
+          "oklch(27% 0.013 140)",
+          "oklch(39% 0.016 140)",
+          "oklch(51% 0.019 140)",
+          "oklch(63% 0.018 140)",
+          "oklch(75% 0.015 140)",
+          "oklch(86% 0.012 140)",
+          "oklch(95% 0.010 140)"
+        ],
+        "dark": "#0F201B"
+      },
+      "front": {
+        "role": "neutral",
+        "displayName": "Drawer Front",
+        "canonical": "#E4EAE2",
+        "tonalRamp": [
+          "oklch(15% 0.006 138)",
+          "oklch(27% 0.008 138)",
+          "oklch(39% 0.010 138)",
+          "oklch(51% 0.011 138)",
+          "oklch(63% 0.011 138)",
+          "oklch(75% 0.009 138)",
+          "oklch(86% 0.007 138)",
+          "oklch(95% 0.006 138)"
+        ],
+        "dark": "#24443B"
+      },
+      "front-dim": {
+        "role": "neutral",
+        "displayName": "Dimmed Front",
+        "canonical": "#D9E0D7",
+        "tonalRamp": [
+          "oklch(15% 0.007 138)",
+          "oklch(27% 0.009 138)",
+          "oklch(39% 0.011 138)",
+          "oklch(51% 0.013 138)",
+          "oklch(63% 0.013 138)",
+          "oklch(75% 0.010 138)",
+          "oklch(86% 0.008 138)",
+          "oklch(95% 0.007 138)"
+        ],
+        "dark": "#1D382F"
+      },
+      "edge": {
+        "role": "neutral",
+        "displayName": "Steel Edge",
+        "canonical": "#9AAA9D",
+        "tonalRamp": [
+          "oklch(15% 0.013 151)",
+          "oklch(27% 0.017 151)",
+          "oklch(39% 0.021 151)",
+          "oklch(51% 0.025 151)",
+          "oklch(63% 0.023 151)",
+          "oklch(75% 0.019 151)",
+          "oklch(86% 0.016 151)",
+          "oklch(95% 0.013 151)"
+        ],
+        "dark": "#0A1713"
+      },
+      "tray": {
+        "role": "neutral",
+        "displayName": "Tray Floor",
+        "canonical": "#EEF1EC",
+        "tonalRamp": [
+          "oklch(15% 0.003 132)",
+          "oklch(27% 0.005 132)",
+          "oklch(39% 0.006 132)",
+          "oklch(51% 0.007 132)",
+          "oklch(63% 0.006 132)",
+          "oklch(75% 0.005 132)",
+          "oklch(86% 0.004 132)",
+          "oklch(95% 0.003 132)"
+        ],
+        "dark": "#0D1C17"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#14261F",
+        "tonalRamp": [
+          "oklch(15% 0.014 168)",
+          "oklch(27% 0.018 168)",
+          "oklch(39% 0.022 168)",
+          "oklch(51% 0.027 168)",
+          "oklch(63% 0.025 168)",
+          "oklch(75% 0.021 168)",
+          "oklch(86% 0.017 168)",
+          "oklch(95% 0.014 168)"
+        ],
+        "dark": "#EEF2EC"
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink, secondary",
+        "canonical": "#3A5047",
+        "tonalRamp": [
+          "oklch(15% 0.015 168)",
+          "oklch(27% 0.020 168)",
+          "oklch(39% 0.025 168)",
+          "oklch(51% 0.029 168)",
+          "oklch(63% 0.028 168)",
+          "oklch(75% 0.023 168)",
+          "oklch(86% 0.019 168)",
+          "oklch(95% 0.015 168)"
+        ],
+        "dark": "#B4C4B9"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#FAFBF8",
+        "tonalRamp": [
+          "oklch(15% 0.002 122)",
+          "oklch(27% 0.003 122)",
+          "oklch(39% 0.003 122)",
+          "oklch(51% 0.004 122)",
+          "oklch(63% 0.004 122)",
+          "oklch(75% 0.003 122)",
+          "oklch(86% 0.002 122)",
+          "oklch(95% 0.002 122)"
+        ],
+        "dark": "#EEF0EA"
+      },
+      "paper-edge": {
+        "role": "neutral",
+        "displayName": "Paper Edge",
+        "canonical": "#D3D8D0",
+        "tonalRamp": [
+          "oklch(15% 0.006 135)",
+          "oklch(27% 0.008 135)",
+          "oklch(39% 0.010 135)",
+          "oklch(51% 0.011 135)",
+          "oklch(63% 0.011 135)",
+          "oklch(75% 0.009 135)",
+          "oklch(86% 0.007 135)",
+          "oklch(95% 0.006 135)"
+        ],
+        "dark": "#C7CDC4"
+      },
+      "paper-ink": {
+        "role": "neutral",
+        "displayName": "Paper Ink",
+        "canonical": "#14261F",
+        "tonalRamp": [
+          "oklch(15% 0.014 168)",
+          "oklch(27% 0.018 168)",
+          "oklch(39% 0.022 168)",
+          "oklch(51% 0.027 168)",
+          "oklch(63% 0.025 168)",
+          "oklch(75% 0.021 168)",
+          "oklch(86% 0.017 168)",
+          "oklch(95% 0.014 168)"
+        ]
+      },
+      "paper-ink-2": {
+        "role": "neutral",
+        "displayName": "Paper Ink, secondary",
+        "canonical": "#46574F",
+        "tonalRamp": [
+          "oklch(15% 0.012 160)",
+          "oklch(27% 0.016 160)",
+          "oklch(39% 0.020 160)",
+          "oklch(51% 0.024 160)",
+          "oklch(63% 0.022 160)",
+          "oklch(75% 0.019 160)",
+          "oklch(86% 0.015 160)",
+          "oklch(95% 0.012 160)"
+        ]
+      },
+      "label": {
+        "role": "neutral",
+        "displayName": "Label Card",
+        "canonical": "#FBFAF4",
+        "tonalRamp": [
+          "oklch(15% 0.004 99)",
+          "oklch(27% 0.005 99)",
+          "oklch(39% 0.006 99)",
+          "oklch(51% 0.008 99)",
+          "oklch(63% 0.007 99)",
+          "oklch(75% 0.006 99)",
+          "oklch(86% 0.005 99)",
+          "oklch(95% 0.004 99)"
+        ],
+        "dark": "#F1EFE6"
+      }
+    },
+    "themes": {
+      "dark": {
+        "trigger": "@media (prefers-color-scheme: dark)",
+        "note": "Steel and brass change; paper-ink, solid and live do not. Focus ring becomes #E6CB86 on steel; shadow tint becomes black."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name on the nameplate only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The one-liner under the role; the Correspondence opener at clamp(1.25rem, 2vw, 1.5rem)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Specimen names; 1.5rem on a three-up shelf."
+      },
+      "title-sm": {
+        "displayName": "Title small",
+        "purpose": "Record entry roles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Bio, tray notes; summaries 1rem, skill text 0.9375rem."
+      },
+      "label": {
+        "displayName": "Typed label",
+        "purpose": "Drawer label titles, uppercase."
+      },
+      "data": {
+        "displayName": "Typed data",
+        "purpose": "Label subtitles, data strips, dates, counts, route roles."
+      }
+    },
+    "shadows": [
+      {
+        "name": "cabinet-cast",
+        "value": "0 40px 60px -40px rgb(var(--shadow) / .55), inset 0 1px 0 rgb(255 255 255 / .18)",
+        "purpose": "Cabinet body on the ground."
+      },
+      {
+        "name": "front-rest",
+        "value": "inset 0 1px 0 rgb(255 255 255 / .28), inset 0 -3px 0 rgb(0 0 0 / .07)",
+        "purpose": "Closed drawer front."
+      },
+      {
+        "name": "front-pulled",
+        "value": "inset 0 1px 0 rgb(255 255 255 / .28), 0 14px 18px -12px rgb(var(--shadow) / .55)",
+        "purpose": "Open drawer front casting onto its tray."
+      },
+      {
+        "name": "tray-recess",
+        "value": "inset 0 14px 14px -12px rgb(0 0 0 / .32)",
+        "purpose": "Tray floor under the front."
+      },
+      {
+        "name": "paper-lift",
+        "value": "0 1px 0 rgb(0 0 0 / .05), 0 10px 20px -14px rgb(var(--shadow) / .55)",
+        "purpose": "Specimens; skill and record cards use 0 8px 16px -14px."
+      },
+      {
+        "name": "label-recess",
+        "value": "inset 0 1px 2px rgb(0 0 0 / .14), 0 1px 0 var(--brass-hi)",
+        "purpose": "Paper seated in a brass holder."
+      },
+      {
+        "name": "brass-bevel",
+        "value": "inset 0 1px 0 var(--brass-hi), 0 2px 4px -1px rgb(var(--shadow) / .3)",
+        "purpose": "Resume button."
+      },
+      {
+        "name": "lit-ring",
+        "value": "0 0 0 3px var(--brass)",
+        "purpose": "Specimen or skill reached by a cross-drawer link; fades over 2.6s."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.22, 1, .36, 1)",
+        "purpose": "All drawer, pull and settle motion."
+      },
+      {
+        "name": "open",
+        "value": "380ms",
+        "purpose": "Tray grid-template-rows 0fr to 1fr, front shadow, pull drop. JS waits this long before scrolling to a target."
+      },
+      {
+        "name": "close",
+        "value": "260ms",
+        "purpose": "Tray closing; tray-inner becomes visibility:hidden after it."
+      },
+      {
+        "name": "press",
+        "value": "90ms ease-out",
+        "purpose": "translateY(1px) scale(.985) on buttons, scale(.995) translateY(1px) on drawer fronts."
+      },
+      {
+        "name": "hover-color",
+        "value": "160ms ease-out",
+        "purpose": "Button and index-row background changes; fronts use 200ms."
+      },
+      {
+        "name": "settle",
+        "value": "520ms ease-out, 8px rise + fade, 70ms stagger",
+        "purpose": "Load moment for the open drawer's specimens, at min-width 60.01rem with motion allowed; plays once (html.settled after 900ms)."
+      },
+      {
+        "name": "lit",
+        "value": "2.6s ease-out",
+        "purpose": "Brass ring holds to 55% then fades."
+      },
+      {
+        "name": "disclosure",
+        "value": "200ms ease-out",
+        "purpose": "How it works chevron rotation."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all transitions and animations 0s",
+        "purpose": "prefers-reduced-motion: reduce; scrolling becomes instant."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "one-column",
+        "value": "max-width: 60rem",
+        "purpose": "Single column, static nameplate, index card hidden."
+      },
+      {
+        "name": "gutters",
+        "value": "min-width: 40rem",
+        "purpose": "Side padding grows to clamp(1.5rem, 4vw, 3.5rem)."
+      },
+      {
+        "name": "full-resume",
+        "value": "max-width: 30rem",
+        "purpose": "Nameplate Resume button spans full width."
+      },
+      {
+        "name": "compact",
+        "value": "max-width: 26rem",
+        "purpose": "Index counts hidden, pull 2.5rem."
+      },
+      {
+        "name": "tray @container 26–43.99rem",
+        "value": "specimen plate | body side by side"
+      },
+      {
+        "name": "tray @container 44rem",
+        "value": "three-up shelf on subgrid"
+      },
+      {
+        "name": "tray @container 34rem",
+        "value": "skills two-up; route horizontal above, vertical below"
+      },
+      {
+        "name": "tray @container 36rem",
+        "value": "record date column 9rem; education and toolbox two-up"
+      }
+    ],
+    "accessibility": [
+      "Skip link to the cabinet; cabinet is a focusable main landmark.",
+      "Drawer fronts are buttons inside h2 headings with aria-expanded and aria-controls; without JS all trays are open.",
+      "Closed trays are visibility:hidden after closing so their contents leave the tab order.",
+      "Focus ring 3px solid, offset 3px: ink on steel by day, lit brass at night, collection-green solid inside paper.",
+      "Outbound links carry a visually hidden '(opens in a new tab)'; icons are inline SVG with aria-hidden.",
+      "Cross-drawer targets receive tabindex=-1 and focus after the open completes; deep links open without stealing focus.",
+      "Hover colours are neutralised under hover: none.",
+      "Verified: axe 0 violations at 1440 light/dark, 390, 1024 dark; Lighthouse desktop 100/100/100/100, mobile 99/100/100/100."
+    ],
+    "assets": [
+      {
+        "path": "assets/fonts/bricolage-grotesque-latin.woff2",
+        "provenance": "Bricolage Grotesque variable 200–800, latin subset, SIL OFL; self-hosted, preloaded."
+      },
+      {
+        "path": "assets/fonts/courier-prime-400-latin.woff2",
+        "provenance": "Courier Prime 400, latin subset, SIL OFL; self-hosted."
+      },
+      {
+        "path": "assets/fonts/courier-prime-700-latin.woff2",
+        "provenance": "Courier Prime 700, latin subset, SIL OFL; self-hosted."
+      },
+      {
+        "path": "assets/og-image.png",
+        "provenance": "1200x630, rendered from docs/og-card.html by headless Chrome (command in that file's header). Regenerate, never hand-edit."
+      },
+      {
+        "path": "assets/rewind-and-release.jpg",
+        "provenance": "Capture of the live InvestEdge app, made before this build; carried over unchanged."
+      },
+      {
+        "path": "assets/plotted-planner.webp",
+        "provenance": "Capture of the live Plotted app, made before this build; carried over unchanged."
+      },
+      {
+        "path": "assets/marketlens-analysis.webp",
+        "provenance": "Capture of the live MarketLens app, made before this build; carried over unchanged."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Brass Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one primary action on steel (Resume).",
+      "html": "<a class=\"ds-btn\" href=\"#\">Resume (PDF)<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M8 2.5v10M3.5 8.5 8 13l4.5-4.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: .5rem; background: var(--brass, #C9A653); color: var(--on-brass, #14261F); border: 1px solid var(--brass-edge, #8F7128); padding: .8rem 1.15rem; border-radius: 4px; font: 600 1.0625rem/1.55 var(--display, 'Bricolage Grotesque', sans-serif); text-decoration: none; box-shadow: inset 0 1px 0 var(--brass-hi, #E2C77E), 0 2px 4px -1px rgb(20 38 31 / .3); transition: transform 90ms ease-out, box-shadow 90ms ease-out, background-color 160ms ease-out; } .ds-btn:hover { background: var(--brass-hi, #E2C77E); } .ds-btn:active { transform: translateY(1px) scale(.985); box-shadow: inset 0 1px 0 var(--brass-hi, #E2C77E); } .ds-btn:focus-visible { outline: 3px solid var(--focus, #14261F); outline-offset: 3px; }"
+    },
+    {
+      "name": "Solid Button",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "Live-app action on paper.",
+      "html": "<div class=\"ds-paper\"><a class=\"ds-go\" href=\"#\">Live app<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M5 3h8v8M13 3 3.5 12.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a> <a class=\"ds-go ds-quiet\" href=\"#\">Source</a></div>",
+      "css": ".ds-paper { background: #FAFBF8; padding: .875rem; border-radius: 3px; display: flex; gap: 1rem; align-items: center; } .ds-go { display: inline-flex; align-items: center; gap: .4rem; font: 600 .9375rem/1.55 'Bricolage Grotesque', sans-serif; text-decoration: none; background: #1F3A33; color: #F6F7F3; padding: .55rem .9rem; border-radius: 4px; transition: transform 90ms ease-out, background-color 160ms ease-out; } .ds-go:not(.ds-quiet):hover { background: #2D5247; } .ds-go:active { transform: translateY(1px) scale(.985); } .ds-go:focus-visible { outline: 3px solid #1F3A33; outline-offset: 3px; } .ds-quiet { background: transparent; color: #14261F; padding-inline: .25rem; text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); } .ds-quiet:hover { text-decoration-color: currentColor; }"
+    },
+    {
+      "name": "Drawer Front",
+      "kind": "custom",
+      "refersTo": "drawer-front",
+      "description": "Full-width drawer button: brass label holder with typed title and contents, brass cup pull.",
+      "html": "<div class=\"ds-cab\"><button class=\"ds-front\" aria-expanded=\"false\"><span class=\"ds-holder\"><span class=\"ds-lt\">Toolkit</span><span class=\"ds-ls\">6 Claude skills · lightbulb to ai-brief</span></span><span class=\"ds-pull\" aria-hidden=\"true\"></span></button></div>",
+      "css": ".ds-cab { background: var(--carcass, #C3CDC1); border: 1px solid var(--edge, #9AAA9D); border-radius: 6px; padding: .75rem; } .ds-front { all: unset; box-sizing: border-box; width: 100%; min-height: 4.75rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .75rem 1.25rem; background: var(--front, #E4EAE2); border: 1px solid var(--edge, #9AAA9D); border-radius: 4px; box-shadow: inset 0 1px 0 rgb(255 255 255 / .28), inset 0 -3px 0 rgb(0 0 0 / .07); cursor: pointer; transition: transform 90ms ease-out, box-shadow 380ms cubic-bezier(.22,1,.36,1), background-color 200ms ease-out; } .ds-front:active { transform: scale(.995) translateY(1px); } .ds-front:focus-visible { outline: 3px solid var(--focus, #14261F); outline-offset: 3px; } .ds-front[aria-expanded=true] { box-shadow: inset 0 1px 0 rgb(255 255 255 / .28), 0 14px 18px -12px rgb(20 38 31 / .55); } .ds-holder { display: grid; gap: .1rem; background: #FBFAF4; color: #14261F; border: 3px solid var(--brass, #C9A653); border-radius: 2px; padding: .4rem .75rem .45rem; box-shadow: inset 0 1px 2px rgb(0 0 0 / .14), 0 1px 0 var(--brass-hi, #E2C77E); } .ds-lt { font: 700 1.0625rem/1.2 'Courier Prime', monospace; letter-spacing: .08em; text-transform: uppercase; } .ds-ls { font: 400 .8125rem/1.3 'Courier Prime', monospace; color: #46574F; } .ds-pull { flex: none; width: 5rem; height: 1.25rem; border-radius: 3px 3px 999px 999px; background: var(--brass, #C9A653); border: 1px solid var(--brass-edge, #8F7128); box-shadow: inset 0 1px 0 var(--brass-hi, #E2C77E), 0 2px 3px rgb(0 0 0 / .28); }"
+    },
+    {
+      "name": "Specimen",
+      "kind": "card",
+      "refersTo": "specimen",
+      "description": "A project on paper in a tray: plate, title, summary, typed data strip, actions.",
+      "html": "<div class=\"ds-tray\"><article class=\"ds-spec\"><div class=\"ds-plate\"></div><h3>Plotted</h3><p>Plan your degree semester by semester against your school's real catalog.</p><dl class=\"ds-data\"><div><dt>Status</dt><dd><span class=\"ds-live\">Live</span> · Nov 2026</dd></div></dl></article></div>",
+      "css": ".ds-tray { background: var(--tray, #EEF1EC); border: 1px solid var(--edge, #9AAA9D); border-top: 0; border-radius: 0 0 4px 4px; box-shadow: inset 0 14px 14px -12px rgb(0 0 0 / .32); padding: 1.25rem; } .ds-spec { background: #FAFBF8; color: #14261F; border-radius: 3px; padding: .875rem; box-shadow: 0 1px 0 rgb(0 0 0 / .05), 0 10px 20px -14px rgb(20 38 31 / .55); max-width: 22rem; } .ds-plate { aspect-ratio: 16 / 10; background: #D3D8D0; border: 1px solid #D3D8D0; border-radius: 2px; } .ds-spec h3 { margin: 1rem 0 0; font: 800 1.75rem/1.05 'Bricolage Grotesque', sans-serif; letter-spacing: -0.02em; } .ds-spec p { margin: .5rem 0 0; font: 400 1rem/1.55 'Bricolage Grotesque', sans-serif; } .ds-data { margin: .875rem 0 0; font: 400 .8125rem/1.45 'Courier Prime', monospace; } .ds-data div { display: flex; gap: .5rem; } .ds-data dt { flex: 0 0 4.75rem; text-transform: uppercase; letter-spacing: .08em; color: #46574F; } .ds-data dd { margin: 0; } .ds-live { font-weight: 700; color: #1D6A43; } .ds-live::before { content: ''; display: inline-block; width: .5em; height: .5em; margin-right: .35em; border-radius: 50%; background: currentColor; }"
+    },
+    {
+      "name": "Skill Card",
+      "kind": "card",
+      "refersTo": "skill-card",
+      "description": "A Claude skill on paper: typed name, stage tag, description, used-on links.",
+      "html": "<article class=\"ds-skill\"><h3>original-ui</h3><p class=\"ds-stage\">Design</p><p>Interviews for the feel you want, researches real interfaces, and combines them into a concept.</p></article>",
+      "css": ".ds-skill { background: #FAFBF8; color: #14261F; border-radius: 3px; padding: .875rem 1rem 1rem; box-shadow: 0 1px 0 rgb(0 0 0 / .05), 0 8px 16px -14px rgb(20 38 31 / .55); max-width: 22rem; } .ds-skill h3 { margin: 0; font: 700 1.125rem/1.2 'Courier Prime', monospace; } .ds-stage { margin: .15rem 0 0; font: 600 .875rem/1.4 'Bricolage Grotesque', sans-serif; color: #46574F; } .ds-skill p:not(.ds-stage) { margin: .5rem 0 0; font: 400 .9375rem/1.55 'Bricolage Grotesque', sans-serif; }"
+    },
+    {
+      "name": "Index Card",
+      "kind": "nav",
+      "refersTo": "index-card",
+      "description": "Card-catalogue index of drawers on the nameplate (hidden under 60rem).",
+      "html": "<nav class=\"ds-index\" aria-label=\"Cabinet index\"><h2>In the cabinet</h2><ol><li><a href=\"#\"><span>Shipped</span><span class=\"ds-count\">3 live projects</span></a></li><li><a href=\"#\"><span>Toolkit</span><span class=\"ds-count\">6 Claude skills</span></a></li></ol></nav>",
+      "css": ".ds-index { max-width: 26rem; background: #FBFAF4; color: #14261F; border: 3px solid var(--brass, #C9A653); border-radius: 3px; padding: .9rem 1rem 1rem; box-shadow: inset 0 1px 2px rgb(0 0 0 / .12), 0 6px 14px -10px rgb(20 38 31 / .5); } .ds-index h2 { margin: 0; font: 700 .8125rem/1.2 'Courier Prime', monospace; letter-spacing: .1em; text-transform: uppercase; color: #46574F; } .ds-index ol { list-style: none; margin: .5rem 0 0; padding: 0; } .ds-index li + li { border-top: 1px dashed #D3D8D0; } .ds-index a { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 1rem; padding: .55rem .25rem; color: inherit; text-decoration: none; border-radius: 2px; font: 600 1.0625rem/1.55 'Bricolage Grotesque', sans-serif; transition: background-color 160ms ease-out; } .ds-index a:hover { background: color-mix(in srgb, #C9A653 18%, transparent); } .ds-index a:focus-visible { outline: 3px solid #1F3A33; outline-offset: 3px; } .ds-count { font: 400 .8125rem/1.3 'Courier Prime', monospace; color: #46574F; }"
+    },
+    {
+      "name": "Record Entry",
+      "kind": "custom",
+      "description": "Experience entry: typed date column, role title with organisation, brass-square bullets.",
+      "html": "<article class=\"ds-entry\"><p class=\"ds-when\">Aug 2024 – now<br>Dubai, UAE</p><div><h3>Data Science Associate <span>Wio Bank</span></h3><ul><li>Built a <strong>transaction-categorization cascade</strong> with an LLM tail fallback.</li></ul></div></article>",
+      "css": ".ds-entry { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: .25rem 1.5rem; } .ds-when { margin: 0; padding-top: .25rem; font: 400 .8125rem/1.5 'Courier Prime', monospace; color: var(--ink-2, #3A5047); } .ds-entry h3 { margin: 0; font: 800 1.25rem/1.2 'Bricolage Grotesque', sans-serif; letter-spacing: -0.01em; } .ds-entry h3 span { display: block; font-weight: 600; font-size: 1rem; color: var(--ink-2, #3A5047); letter-spacing: 0; } .ds-entry ul { list-style: none; margin: .6rem 0 0; padding: 0; } .ds-entry li { position: relative; padding-left: 1rem; font: 400 .96875rem/1.55 'Bricolage Grotesque', sans-serif; } .ds-entry li::before { content: ''; position: absolute; left: 0; top: .62em; width: .4rem; height: .4rem; background: var(--brass, #C9A653); border-radius: 1px; } .ds-entry strong { font-weight: 600; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Collection Cabinet",
+    "overview": "The page is a museum specimen cabinet in painted steel. A nameplate introduces Anay at display scale; everything else lives in labelled drawers the visitor pulls open, each holding real specimens on paper. Steel owns the ground, brass is the single accent, and paper islands carry the content. The material story is literal and consistent: steel surfaces are sage-putty by day and deep collection green by night, while labels and specimens stay paper in both themes, as paper would.\n\nDensity is calm at rest and rich on demand. Closed drawers still scan, because every label holder states its contents in typed text. Depth comes from objects, not from decoration: trays are recessed with an inner shadow, open drawer fronts cast a shadow onto the tray, and paper sits just above the tray on a soft lift. The retired \"lab notebook\" identity (cream paper, Newsreader and IBM Plex, blueprint blue) is not a source for this system.\n\nImagery is real: the three specimen plates are captures of Anay's live apps, made before this build and carried into it. The social card (`assets/og-image.png`, 1200x630) is rendered from `docs/og-card.html` by headless Chrome; the command is in that file's header. Regenerate the PNG from the HTML, never edit the raster.",
+    "keyCharacteristics": [
+      "Painted-steel ground with one brass accent (button, label-holder frames, pulls, route rules, bullets, selection).",
+      "Typed paper labels in Courier Prime for data only; everything people read as prose is Bricolage Grotesque.",
+      "Drawers as the section disclosure device: press-instant, interruptible slide, contents ride the tray edge.",
+      "Specimens on cool white paper with a typed data strip.",
+      "Light and dark follow the system preference; no theme toggle."
+    ],
+    "rules": [
+      {
+        "name": "The One Brass Rule",
+        "body": "Brass is the single accent. It frames, pulls and points; it never fills a large surface and never sets body text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paper Stays Paper Rule",
+        "body": "Labels and specimens keep their light paper and dark ink in both themes. Only steel changes with the scheme.",
+        "section": "colors"
+      },
+      {
+        "name": "The Typed Means Data Rule",
+        "body": "Courier Prime is for labels, identifiers, dates, counts and data keys. Sentences are never typed.",
+        "section": "typography"
+      },
+      {
+        "name": "The Objects Cast Rule",
+        "body": "A shadow means an object is above or inside another object. Nothing glows, and nothing is lifted for emphasis alone.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep brass as the only accent, used for frames, pulls, rules and the one primary action on steel.",
+      "**Do** put new content in a drawer with a brass label holder whose typed subtitle states what is inside.",
+      "**Do** set content on paper cards inside trays, with paper-ink text in both themes.",
+      "**Do** use Courier Prime only for labels, identifiers, dates, counts and data keys.",
+      "**Do** lay out tray contents with container queries on the tray, not viewport breakpoints.",
+      "**Do** keep press feedback at 90ms and drawer motion at 380ms open / 260ms close on the shared ease-out.",
+      "**Do** mark every outbound link with a visually hidden \"(opens in a new tab)\" and an inline SVG arrow.",
+      "**Do** regenerate `assets/og-image.png` from `docs/og-card.html` when the palette or copy changes."
+    ],
+    "donts": [
+      "**Don't** fill large areas with brass or set running text in it.",
+      "**Don't** put the solid green button on steel or brass buttons on paper.",
+      "**Don't** set sentences in Courier Prime.",
+      "**Don't** use hard offset shadows or glows; depth is blurred, tinted and physical.",
+      "**Don't** add tabs, carousels or modals: drawers disclose sections, and a \"How it works\" toggle discloses depth inside a card.",
+      "**Don't** reintroduce the retired lab-notebook palette or type."
+    ]
+  }
+}

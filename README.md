@@ -4,6 +4,8 @@ Source for [anaypatel-p.github.io](https://anaypatel-p.github.io): my portfolio.
 
 Static HTML, CSS and vanilla JS. No framework and no build step, served by GitHub Pages.
 
+The design is "The Collection Cabinet": a nameplate introduces me, and everything else lives in labelled drawers you pull open (Shipped, Toolkit, Field record, Correspondence). Without JavaScript every drawer is simply open.
+
 ## Run locally
 
 ```bash
@@ -16,19 +18,21 @@ Then open http://localhost:4321.
 
 | Path | What |
 |------|------|
-| `index.html` | All content. Projects are `<article class="project">`; skills are `<li class="skill">` |
-| `styles.css` | Design tokens at the top (colors for light and dark, type, spacing, motion); everything else uses them |
-| `main.js` | Draws Fig. 1 (the transit diagram) from the `LINES` / `STATIONS` / `PROJECTS` data, and handles skill tracing |
-| `assets/` | Project screenshots, plus `og-image.png` (the 1200×630 link-preview card) |
+| `index.html` | All content. Projects are `<article class="specimen">`; skills are `<li class="skill">`; each drawer is a `<section class="drawer">` |
+| `styles.css` | Self-hosted `@font-face`, then design tokens (steel, brass and paper colors for light and dark, type, motion); everything else uses them |
+| `main.js` | Drawer behaviour: open and close, links that open another drawer (`data-open`, `data-light`), and deep links like `#toolkit` or `#p-plotted` |
+| `assets/` | Project screenshots, `og-image.png` (the 1200×630 link-preview card), and `fonts/` (Bricolage Grotesque and Courier Prime, latin subset, SIL Open Font License) |
 | `docs/og-card.html` | Source for `og-image.png`; the regenerate command is at the top of the file. Re-render it whenever the headline or projects change |
 | `resume.pdf` | Resume |
 | `docs/pm/` | PRD, roadmap, decisions and status for the v2 redesign |
+| `PRODUCT.md` | Who the site is for and what must stay true (used by the impeccable design skill) |
 
 ## Common edits
 
-- **Change a project's status:** edit its `.stamp` (`live`, `soon` or `rebuild`) in `index.html`.
-- **Add a skill:** add a `<li class="skill">` in `index.html`, a `--l-<name>` color in both themes in `styles.css`, and a line in `LINES` (plus its stations) in `main.js`. Lines use only 0°, 45° and 90° segments, so the vertical mobile layout is simply the horizontal one transposed.
-- **Mark a project as built with a skill:** add the skill to the project's `data-skills` and a `.line-tag` link. Also add it to `PROJECTS` in `main.js` if the project should appear at the Shipped station.
+- **Add a project:** copy an `<article class="specimen">` inside `#shipped .shelf` in `index.html`, and update the Shipped drawer's label and the count in the nameplate index.
+- **Add a skill:** copy an `<li class="skill">` inside `#toolkit`. Give it an `id="s-<name>"` so other drawers can link to it.
+- **Link across drawers:** `<a href="#p-plotted" data-open="shipped" data-light="p-plotted">` opens the Shipped drawer, scrolls to Plotted and lights it briefly.
+- **Change which drawer starts open:** move the `is-open` class to another `<section class="drawer">`.
 
 ## Deploy
 
