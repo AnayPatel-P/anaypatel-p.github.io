@@ -39,7 +39,7 @@
 - [x] 4.1 Accessibility pass (axe 0 in light + dark), Lighthouse 100/100/100/100 (LCP 1.1 s, 224 KiB)
 - [x] 4.2 Responsive check 360 → desktop, 200% text at 360 px, light/dark
 - [x] 4.3 Final honesty review against repos (fixed: statsforecast not statsmodels; MarketLens dated May 2026); PRD acceptance check
-- [ ] 4.4 Merge `redesign` → `main` and push **only with Anay's go-ahead**
+- [x] 4.4 Merge `redesign` → `main` and push **only with Anay's go-ahead**
 
 ## Later (post-v1)
 - See PRD §13 Future add-ons

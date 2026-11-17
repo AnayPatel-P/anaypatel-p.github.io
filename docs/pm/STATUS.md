@@ -1,10 +1,10 @@
 # Status
 
 **Updated:** 2026-11-17
-**Current phase:** C – Phase 4 done except 4.4 (merge + push, needs Anay's go-ahead)
-**Current milestone:** 4.4 ship
+**Current phase:** D – shipped (v1 live)
+**Current milestone:** —
 **Last completed:** Lighthouse 100 ×4; axe 0 (light + dark); no overflow at 360 px or at 200% text; honesty fixes; README
-**Next up:** Anay reviews the page, then commit on `redesign` → merge to `main` → push (GitHub Pages deploys)
+**Next up:** human 30-second / 5-second tests; v2 planning (see v2 pitch)
 **Blockers / open questions:** Toolbox "AI" row wording (Anay to confirm); 5-second diagram test with a real person; Plotted card gets a demo link once it's deployed
 
 ## History
@@ -12,6 +12,7 @@
 - 2026-11-17 — Plan approved (all three repos public). Phase 1 skeleton built.
 - 2026-11-17 — Copy approved. original-ui: feel interview, research, three directions; Anay chose A + B mix. Phases 2–3 built and verified in the browser.
 - 2026-11-17 — Phase 4: perf fix (fonts), favicon, 200%-text nav/button fixes, factual corrections, README.
+- 2026-11-17 — Merged redesign → main (1b6359f) and pushed; GitHub Pages build succeeded; live at https://anaypatel-p.github.io.
 
 ## PRD acceptance check
 - F1 hero + resume/contact ✅ · F2 projects with honest chips + links ✅ · F3 six skills with excerpts ✅ · F4 pipeline diagram ✅ · F5 skills↔projects tracing ✅ · F6 experience ✅ · F7 light/dark, responsive, reduced motion, a11y ✅ · F8 layered scan/detail ✅
