@@ -19,7 +19,8 @@ Then open http://localhost:4321.
 | `index.html` | All content. Projects are `<article class="project">`; skills are `<li class="skill">` |
 | `styles.css` | Design tokens at the top (colors for light and dark, type, spacing, motion); everything else uses them |
 | `main.js` | Draws Fig. 1 (the transit diagram) from the `LINES` / `STATIONS` / `PROJECTS` data, and handles skill tracing |
-| `assets/` | Project screenshots |
+| `assets/` | Project screenshots, plus `og-image.png` (the 1200×630 link-preview card) |
+| `docs/og-card.html` | Source for `og-image.png`; the regenerate command is at the top of the file. Re-render it whenever the headline or projects change |
 | `resume.pdf` | Resume |
 | `docs/pm/` | PRD, roadmap, decisions and status for the v2 redesign |
 

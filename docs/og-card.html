@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- Source for assets/og-image.png (1200×630 social preview).
+     Regenerate (from the repo root):
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars \
+       --window-size=1200,630 --force-device-scale-factor=1 --virtual-time-budget=5000 \
+       --screenshot="$PWD/assets/og-image.png" "file://$PWD/docs/og-card.html" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Portfolio social card</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@500&family=Newsreader:ital,wght@0,400;1,400&display=block">
+<style>
+  :root {
+    --paper: #F7F5EF; --ink: #1B1F24; --graphite: #646A72; --rule: #DAD5C8;
+    --accent: #2450A6; --grid: rgba(36, 80, 166, .07); --margin-rule: rgba(36, 80, 166, .28);
+    --l-lightbulb: #A15C07; --l-project-manager: #2450A6; --l-original-ui: #C2410C;
+    --l-agent-builder: #6D4AA8; --l-teach: #2F7D4F; --l-ai-brief: #2F6F79;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background:
+      linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 24px 24px,
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 24px 24px,
+      var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    position: relative;
+  }
+  .rule { position: absolute; top: 0; bottom: 0; left: 222px; border-left: 2px solid var(--margin-rule); }
+  .margin { position: absolute; left: 56px; top: 64px; display: flex; flex-direction: column; gap: 10px; }
+  .mono { font: 500 15px/1.4 "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: var(--graphite); }
+  .main { position: absolute; left: 262px; right: 64px; top: 56px; }
+  .name { font: 500 22px/1 "IBM Plex Sans", sans-serif; letter-spacing: .01em; margin-bottom: 26px; }
+  h1 { font: 400 66px/1.04 "Newsreader", Georgia, serif; letter-spacing: -0.025em; max-width: 860px; }
+  h1 em { font-style: italic; color: var(--accent); }
+  svg { position: absolute; left: 262px; bottom: 74px; }
+  .st rect { fill: var(--paper); stroke: var(--ink); stroke-width: 3; }
+  .lbl { font: 500 15px "IBM Plex Sans", sans-serif; fill: var(--ink); }
+  .num { font: 500 13px "IBM Plex Mono", monospace; fill: var(--graphite); }
+  .proj { font: 400 18px "Newsreader", serif; font-style: italic; fill: var(--ink); }
+  .url { position: absolute; right: 64px; bottom: 34px; }
+  .stamp { position: absolute; right: 64px; top: 60px; font: 500 14px/1 "IBM Plex Mono", monospace; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--accent); border: 2px solid currentColor; padding: 7px 10px; transform: rotate(-3deg); background: rgba(36,80,166,.08); }
+</style>
+</head>
+<body>
+  <div class="rule"></div>
+  <div class="margin"><span class="mono">Entry 001</span><span class="mono">Dubai · Austin</span></div>
+  <div class="stamp">3 shipped</div>
+  <div class="main">
+    <p class="name">Anay Patel · ML &amp; AI Engineer</p>
+    <h1>I build ML systems for finance, and the <em>AI toolkit</em> I use to ship them.</h1>
+  </div>
+
+  <!-- Fig. 1, compressed: one line per skill -->
+  <svg width="900" height="150" viewBox="0 0 900 150" aria-hidden="true">
+    <g fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 120 H34 L64 90 V78" stroke="var(--l-ai-brief)"/>
+      <path d="M64 64 H220" stroke="var(--l-lightbulb)"/>
+      <path d="M220 64 H660" stroke="var(--l-project-manager)"/>
+      <path d="M380 80 H660" stroke="var(--l-original-ui)"/>
+      <path d="M470 10 H500 L540 50 V56" stroke="var(--l-agent-builder)"/>
+      <path d="M470 130 H500 L540 90 V88" stroke="var(--l-teach)"/>
+    </g>
+    <g class="st"><rect x="55" y="52" width="18" height="40" rx="9"/></g>
+    <g class="st"><rect x="211" y="52" width="18" height="40" rx="9"/></g>
+    <g class="st"><rect x="371" y="52" width="18" height="40" rx="9"/></g>
+    <g class="st"><rect x="531" y="52" width="18" height="40" rx="9"/></g>
+    <g class="st"><rect x="649" y="50" width="22" height="44" rx="11"/></g>
+    <text x="80" y="42"><tspan class="num">10 </tspan><tspan class="lbl">Discover</tspan></text>
+    <text x="236" y="42"><tspan class="num">20 </tspan><tspan class="lbl">Plan</tspan></text>
+    <text x="396" y="42"><tspan class="num">30 </tspan><tspan class="lbl">Design</tspan></text>
+    <text x="556" y="42"><tspan class="num">40 </tspan><tspan class="lbl">Build</tspan></text>
+    <text x="686" y="42"><tspan class="num">50 </tspan><tspan class="lbl">Shipped</tspan></text>
+    <text class="proj" x="686" y="80">InvestEdge · Plotted</text>
+    <text class="proj" x="686" y="104">MarketLens</text>
+  </svg>
+
+  <span class="mono url">anaypatel-p.github.io</span>
+</body>
+</html>
