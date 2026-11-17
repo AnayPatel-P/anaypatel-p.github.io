@@ -5,7 +5,7 @@
 **Current milestone:** —
 **Last completed:** Lighthouse 100 ×4; axe 0 (light + dark); no overflow at 360 px or at 200% text; honesty fixes; README
 **Next up:** human 30-second / 5-second tests; v2 planning (see v2 pitch)
-**Blockers / open questions:** Toolbox "AI" row wording (Anay to confirm); 5-second diagram test with a real person; Plotted card gets a demo link once it's deployed
+**Blockers / open questions:** Toolbox "AI" row wording (Anay to confirm); 5-second diagram test with a real person
 
 ## History
 - 2026-11-17 — Intake + elaboration; brief approved; PRD, roadmap, decisions, status written on branch `redesign`.
@@ -13,6 +13,7 @@
 - 2026-11-17 — Copy approved. original-ui: feel interview, research, three directions; Anay chose A + B mix. Phases 2–3 built and verified in the browser.
 - 2026-11-17 — Phase 4: perf fix (fonts), favicon, 200%-text nav/button fixes, factual corrections, README.
 - 2026-11-17 — Merged redesign → main (1b6359f) and pushed; GitHub Pages build succeeded; live at https://anaypatel-p.github.io.
+- 2026-11-17 — Plotted v1 confirmed live (plotted-cyan.vercel.app): stamp → Live, live-app link added on site and profile README.
 
 ## PRD acceptance check
 - F1 hero + resume/contact ✅ · F2 projects with honest chips + links ✅ · F3 six skills with excerpts ✅ · F4 pipeline diagram ✅ · F5 skills↔projects tracing ✅ · F6 experience ✅ · F7 light/dark, responsive, reduced motion, a11y ✅ · F8 layered scan/detail ✅
