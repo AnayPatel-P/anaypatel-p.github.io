@@ -37,9 +37,9 @@ None binding. The previous visual identity ("lab notebook": cream paper, Newsrea
 ## Evidence on Hand
 
 - **Projects (all live):**
-  - InvestEdge: ARIMA, ETS, Prophet and GARCH forecasts on every S&P 500 stock, replayed against reality. Live at anaypatel-p.github.io/investedge/. Screenshot `assets/rewind-and-release.jpg`.
-  - Plotted: semester-by-semester degree planner on real catalogs. Live at plotted-cyan.vercel.app. Screenshot `assets/plotted-planner.webp`.
-  - MarketLens: stock dashboard with live watchlist, charts and portfolio P&L vs the S&P 500. Live at marketlens-live.fly.dev. Screenshot `assets/marketlens-analysis.webp`.
+  - InvestEdge: ARIMA, ETS, Prophet and GARCH forecasts on every S&P 500 stock, replayed against reality. Live at anaypatel-p.github.io/investedge/. Screenshot `assets/investedge-rewind.webp`.
+  - Plotted: semester-by-semester degree planner on real catalogs. Live at plotted-cyan.vercel.app. Screenshot `assets/plotted-route-map.webp`.
+  - MarketLens: stock dashboard with live watchlist, charts and portfolio P&L vs the S&P 500. Live at marketlens-live.fly.dev. Screenshot `assets/marketlens-sharp.webp`.
 - **Skills (six):** lightbulb, project-manager, original-ui, agent-builder, teach, ai-brief, each with an excerpt in `index.html`. Projects were planned with project-manager and designed with original-ui.
 - **Experience:** Wio Bank, Data Science Associate (2024 to now) and ML Intern; The Estée Lauder Companies, CEO Presidential Associate Intern, Data Science. Education: UT Austin MS Business Analytics & AI (May 2028), BS Mathematics (May 2026).
 - **Resume:** `resume.pdf`. Contact: email, GitHub, LinkedIn.

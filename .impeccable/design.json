@@ -525,16 +525,16 @@
         "provenance": "1200x630, rendered from docs/og-card.html by headless Chrome (command in that file's header). Regenerate, never hand-edit."
       },
       {
-        "path": "assets/rewind-and-release.jpg",
-        "provenance": "Capture of the live InvestEdge app, made before this build; carried over unchanged."
+        "path": "assets/investedge-rewind.webp",
+        "provenance": "Playwright capture of the live InvestEdge app (Apple stock page, chart dragged back to Aug 4, 2026), 2026-11-17; cropped to 16:10 and encoded as 1000x625 WebP with Pillow."
       },
       {
-        "path": "assets/plotted-planner.webp",
-        "provenance": "Capture of the live Plotted app, made before this build; carried over unchanged."
+        "path": "assets/plotted-route-map.webp",
+        "provenance": "Playwright capture of the live Plotted app (Texas A&M Data Engineering suggested plan), 2026-11-17; viewport cropped to 16:10 and encoded as 1000x625 WebP with Pillow."
       },
       {
-        "path": "assets/marketlens-analysis.webp",
-        "provenance": "Capture of the live MarketLens app, made before this build; carried over unchanged."
+        "path": "assets/marketlens-sharp.webp",
+        "provenance": "Playwright capture of the live MarketLens app (default Sharp lens, Apple), 2026-11-17; viewport cropped to 16:10 and encoded as 1000x625 WebP with Pillow."
       }
     ]
   },
