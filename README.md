@@ -37,3 +37,5 @@ Then open http://localhost:4321.
 ## Deploy
 
 Push to `main`. GitHub Pages serves the repository root.
+
+Browsers keep `styles.css` and `main.js` for 10 minutes, so after changing either one, bump the `?v=` date on its `<link>` or `<script>` tag in `index.html`. Otherwise returning visitors get the new page with the old stylesheet.
