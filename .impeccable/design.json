@@ -591,7 +591,7 @@
       "name": "Record Entry",
       "kind": "custom",
       "description": "Experience entry: typed date column, role title with organisation, brass-square bullets.",
-      "html": "<article class=\"ds-entry\"><p class=\"ds-when\">Aug 2024 – now<br>Dubai, UAE</p><div><h3>Data Science Associate <span>Wio Bank</span></h3><ul><li>Built a <strong>transaction-categorization cascade</strong> with an LLM tail fallback.</li></ul></div></article>",
+      "html": "<article class=\"ds-entry\"><p class=\"ds-when\">Aug 2024 – now<br>Abu Dhabi, UAE</p><div><h3>Data Science Associate <span>Wio Bank</span></h3><ul><li>Built a <strong>transaction-categorization cascade</strong> with an LLM tail fallback.</li></ul></div></article>",
       "css": ".ds-entry { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: .25rem 1.5rem; } .ds-when { margin: 0; padding-top: .25rem; font: 400 .8125rem/1.5 'Courier Prime', monospace; color: var(--ink-2, #3A5047); } .ds-entry h3 { margin: 0; font: 800 1.25rem/1.2 'Bricolage Grotesque', sans-serif; letter-spacing: -0.01em; } .ds-entry h3 span { display: block; font-weight: 600; font-size: 1rem; color: var(--ink-2, #3A5047); letter-spacing: 0; } .ds-entry ul { list-style: none; margin: .6rem 0 0; padding: 0; } .ds-entry li { position: relative; padding-left: 1rem; font: 400 .96875rem/1.55 'Bricolage Grotesque', sans-serif; } .ds-entry li::before { content: ''; position: absolute; left: 0; top: .62em; width: .4rem; height: .4rem; background: var(--brass, #C9A653); border-radius: 1px; } .ds-entry strong { font-weight: 600; }"
     }
   ],
