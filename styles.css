@@ -264,8 +264,11 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .2em;
   .specimen { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: start; }
 }
 @container (min-width: 44rem) {
-  /* three specimens side by side; subgrid lines up title, summary, status and buttons across them */
+  /* specimens side by side; subgrid lines up title, summary, status and buttons across each row */
   .shelf { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 0; align-items: stretch; }
+  /* four specimens: two rows of two, with room between the rows */
+  .shelf:has(> .specimen:nth-child(4)) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .shelf:has(> .specimen:nth-child(4)) .specimen:nth-child(n + 3) { margin-top: .875rem; }
   .shelf .specimen { grid-row: span 6; grid-template-rows: subgrid; row-gap: 0; padding: .75rem; }
   .shelf .spec-body { display: contents; }
   .shelf .spec-body h3 { font-size: 1.5rem; margin-top: .875rem; }

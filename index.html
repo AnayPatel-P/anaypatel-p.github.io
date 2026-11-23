@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://anaypatel-p.github.io/">
 <meta property="og:site_name" content="Anay Patel">
 <meta property="og:title" content="Anay Patel — Forward Deployed ML Engineer">
-<meta property="og:description" content="I ship ML and LLM features inside a bank, and build the AI toolkit I use to ship them. Three shipped projects: InvestEdge, Plotted and MarketLens.">
+<meta property="og:description" content="I ship ML and LLM features inside a bank, and build the AI toolkit I use to ship them. Four shipped projects: InvestEdge, Plotted, MarketLens and Examiner.">
 <meta property="og:image" content="https://anaypatel-p.github.io/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -56,7 +56,7 @@
       <nav class="index" aria-label="Cabinet index">
         <h2 class="index-title">In the cabinet</h2>
         <ol>
-          <li><a href="#shipped" data-open="shipped"><span>Shipped</span><span class="count">3 live projects</span></a></li>
+          <li><a href="#shipped" data-open="shipped"><span>Shipped</span><span class="count">4 live projects</span></a></li>
           <li><a href="#toolkit" data-open="toolkit"><span>Toolkit</span><span class="count">6 Claude skills</span></a></li>
           <li><a href="#record" data-open="record"><span>Field record</span><span class="count">Wio Bank, Estée Lauder</span></a></li>
           <li><a href="#correspondence" data-open="correspondence"><span>Correspondence</span><span class="count">Email, LinkedIn, GitHub</span></a></li>
@@ -72,7 +72,7 @@
     <section class="drawer is-open" id="shipped" aria-labelledby="shipped-label">
       <h2 class="front">
         <button type="button" id="shipped-label" aria-expanded="true" aria-controls="shipped-tray">
-          <span class="holder"><span class="label-title">Shipped</span><span class="label-sub">InvestEdge · Plotted · MarketLens</span></span>
+          <span class="holder"><span class="label-title">Shipped</span><span class="label-sub">InvestEdge · Plotted · MarketLens · Examiner</span></span>
           <span class="pull" aria-hidden="true"></span>
         </button>
       </h2>
@@ -147,6 +147,29 @@
               </details>
             </div>
           </article>
+
+          <article class="specimen" id="p-examiner" data-skills="project-manager">
+            <figure class="plate">
+              <img src="assets/examiner-diff.webp" width="1000" height="625" alt="Examiner diff screen comparing a naive and a guarded bank chatbot on 127 Regulation E and fee scenarios: one tick per scenario, headlined &quot;Fixed 93 · Broke 3&quot;, with overall pass rate rising from 21.3% to 92.1%" loading="lazy" decoding="async">
+            </figure>
+            <div class="spec-body">
+              <h3>Examiner</h3>
+              <p class="summary">An eval harness that grades a bank chatbot against the text of Regulation&nbsp;E itself. Grounding the bot takes it from 21% to 92% on 127 cited scenarios, and a CI gate keeps it from sliding back.</p>
+              <dl class="data">
+                <div><dt>Status</dt><dd><span class="live">Live</span> · Nov 2026</dd></div>
+              </dl>
+              <p class="links">
+                <a class="go" href="https://anaypatel-p.github.io/examiner/" target="_blank" rel="noopener noreferrer">Live scorecard<svg class="i" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+                <a class="go quiet" href="https://github.com/AnayPatel-P/examiner" target="_blank" rel="noopener noreferrer">Source<svg class="i" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+              </p>
+              <details class="more">
+                <summary>How it works</summary>
+                <dl class="data stack"><div><dt>Stack</dt><dd>Python, Inspect, Claude API, FastAPI, SQLite, React, TypeScript, GitHub Actions</dd></div></dl>
+                <p>Every scenario cites a paragraph of 12&nbsp;CFR&nbsp;1005, parsed from the official eCFR XML. A custom Inspect solver drives the bot over HTTP; grading is deterministic fact checks plus a Claude judge on three versioned rubrics, with the spend cap enforced inside the judge. Failures roll up by Reg&nbsp;E clause, and reading them by hand caught a judge error: a new-account exception sat outside the paragraph the scenario cited. The gate fails a run below 85% or more than 4 points under baseline, both set above measured run-to-run noise. A blind-labeling screen is built to calibrate the judge against human labels; kappa isn&rsquo;t measured yet.</p>
+                <p class="built">Built with <a href="#s-project-manager" data-open="toolkit" data-light="s-project-manager">project-manager</a></p>
+              </details>
+            </div>
+          </article>
           </div>
         </div>
       </div>
@@ -169,7 +192,7 @@
             <li><span class="stage">Plan</span><span class="who">project-manager</span></li>
             <li><span class="stage">Design</span><span class="who">original-ui</span></li>
             <li><span class="stage">Build</span><span class="who">teach · agent-builder</span></li>
-            <li><span class="stage">Shipped</span><span class="who">3 live projects</span></li>
+            <li><span class="stage">Shipped</span><span class="who">4 live projects</span></li>
           </ol>
 
           <ul class="skills">
@@ -182,7 +205,7 @@
               <h3>project-manager</h3>
               <p class="stage-tag">Plan &amp; build</p>
               <p>Takes a raw idea to a shipped product through gated phases: clarifying questions, a MoSCoW-prioritized PRD, a roadmap where every phase ends in a demo, then build with check-ins. New asks go through a change-request flow instead of creeping in.</p>
-              <p class="used">Used on <a href="#p-investedge" data-open="shipped" data-light="p-investedge">InvestEdge</a>, <a href="#p-plotted" data-open="shipped" data-light="p-plotted">Plotted</a> and <a href="#p-marketlens" data-open="shipped" data-light="p-marketlens">MarketLens</a></p>
+              <p class="used">Used on <a href="#p-investedge" data-open="shipped" data-light="p-investedge">InvestEdge</a>, <a href="#p-plotted" data-open="shipped" data-light="p-plotted">Plotted</a>, <a href="#p-marketlens" data-open="shipped" data-light="p-marketlens">MarketLens</a> and <a href="#p-examiner" data-open="shipped" data-light="p-examiner">Examiner</a></p>
             </li>
             <li class="skill" id="s-original-ui">
               <h3>original-ui</h3>
