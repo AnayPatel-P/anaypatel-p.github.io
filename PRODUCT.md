@@ -41,7 +41,7 @@ None binding. The previous visual identity ("lab notebook": cream paper, Newsrea
   - Plotted: degree planner drawn as a route map (semesters as stations, requirements as lines), checked against real catalogs. Live at plotted-cyan.vercel.app. Screenshot `assets/plotted-route-map.webp`.
   - MarketLens: stock dashboard with live watchlist, charts and portfolio P&L vs the S&P 500. Live at marketlens-live.fly.dev. Screenshot `assets/marketlens-sharp.webp`.
 - **Skills (six):** lightbulb, project-manager, original-ui, agent-builder, teach, ai-brief, each with an excerpt in `index.html`. Projects were planned with project-manager and designed with original-ui.
-- **Experience:** Wio Bank, Data Scientist (June 2026 to now) and ML Intern (Aug 2024 to May 2026); The Estée Lauder Companies, CEO Presidential Associate Intern, Data Science. Education: UT Austin MS Business Analytics & AI (May 2028), BS Mathematics (May 2026).
+- **Experience:** Wio Bank, Data Science Associate (June 2026 to now) and ML Intern (Aug 2024 to May 2026); The Estée Lauder Companies, CEO Presidential Associate Intern, Data Science. Education: UT Austin MS Business Analytics & AI (May 2028), BS Mathematics (May 2026).
 - **Resume:** `resume.pdf`. Contact: email, GitHub, LinkedIn.
 - **Absent, do not fabricate:** headline metrics per project, testimonials, employer logos used as endorsements, user counts.
 
