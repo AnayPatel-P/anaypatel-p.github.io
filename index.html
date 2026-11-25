@@ -56,7 +56,7 @@
       <nav class="index" aria-label="Cabinet index">
         <h2 class="index-title">In the cabinet</h2>
         <ol>
-          <li><a href="#shipped" data-open="shipped"><span>Shipped</span><span class="count">4 live projects</span></a></li>
+          <li><a href="#shipped" data-open="shipped"><span>Shipped</span><span class="count">5 projects</span></a></li>
           <li><a href="#toolkit" data-open="toolkit"><span>Toolkit</span><span class="count">6 Claude skills</span></a></li>
           <li><a href="#record" data-open="record"><span>Field record</span><span class="count">Wio Bank, Estée Lauder</span></a></li>
           <li><a href="#correspondence" data-open="correspondence"><span>Correspondence</span><span class="count">Email, LinkedIn, GitHub</span></a></li>
@@ -72,7 +72,7 @@
     <section class="drawer is-open" id="shipped" aria-labelledby="shipped-label">
       <h2 class="front">
         <button type="button" id="shipped-label" aria-expanded="true" aria-controls="shipped-tray">
-          <span class="holder"><span class="label-title">Shipped</span><span class="label-sub">InvestEdge · Plotted · MarketLens · Examiner</span></span>
+          <span class="holder"><span class="label-title">Shipped</span><span class="label-sub">InvestEdge · Plotted · MarketLens · Examiner · Mission Control</span></span>
           <span class="pull" aria-hidden="true"></span>
         </button>
       </h2>
@@ -170,6 +170,26 @@
               </details>
             </div>
           </article>
+          <article class="specimen" id="p-mission-control">
+            <figure class="plate">
+              <img src="assets/mission-control-typing.webp" width="1000" height="625" alt="Mission Control mid-edit: a Python retry loop typing into an editor view under Claude's note &quot;Wrapping requests in a backoff loop&quot;, a timeline of edits along the bottom, and a monitor-headed robot in the corner explaining the change in a speech bubble" loading="lazy" decoding="async">
+            </figure>
+            <div class="spec-body">
+              <h3>Mission Control</h3>
+              <p class="summary">A local page for watching Claude Code work. Each edit types itself out as it lands, a small robot explains it in plain English, and a nudge box slips a note into the running session without stopping it.</p>
+              <dl class="data">
+                <div><dt>Status</dt><dd>Runs locally · Nov 2026</dd></div>
+              </dl>
+              <p class="links">
+                <a class="go" href="https://github.com/AnayPatel-P/mission-control" target="_blank" rel="noopener noreferrer">Source<svg class="i" aria-hidden="true"><use href="#i-out"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+              </p>
+              <details class="more">
+                <summary>How it works</summary>
+                <dl class="data stack"><div><dt>Stack</dt><dd>Python, FastAPI, server-sent events, vanilla JS, Ollama</dd></div></dl>
+                <p>It tails Claude Code&rsquo;s session logs, so it sees every session and subagent on the machine with no setup, and rewind is just reading the log again. Secrets are masked on the server before anything reaches the browser or the narrator model, with regexes bounded so a 100k-character input can&rsquo;t stall it. Nudges ride on Claude Code hooks: a PostToolUse hook adds the note after the next tool call, and a Stop hook catches it if the turn is about to end. Measured at p95: 18&nbsp;ms of hook overhead per tool call and 0.23&nbsp;s from edit to screen. A local Qwen model writes each bubble in about 0.6&nbsp;s.</p>
+              </details>
+            </div>
+          </article>
           </div>
         </div>
       </div>
@@ -192,7 +212,7 @@
             <li><span class="stage">Plan</span><span class="who">project-manager</span></li>
             <li><span class="stage">Design</span><span class="who">original-ui</span></li>
             <li><span class="stage">Build</span><span class="who">teach · agent-builder</span></li>
-            <li><span class="stage">Shipped</span><span class="who">4 live projects</span></li>
+            <li><span class="stage">Shipped</span><span class="who">5 projects</span></li>
           </ol>
 
           <ul class="skills">
